@@ -1,0 +1,157 @@
+/**
+ * Book Club Joined Styles
+ * Styling for the content that appears after joining a book club
+ */
+
+/* Joined button styling */
+.join-button.joined {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    cursor: default;
+}
+
+/* Joined content container */
+.joined-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Joined confirmation section */
+.joined-confirmation {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.joined-confirmation i {
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.joined-confirmation h4 {
+    color: #4CAF50;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Next meeting info section */
+.next-meeting-info {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.next-meeting-info h4 {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.next-meeting-info p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.next-meeting-info i {
+    color: #666;
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* Club resources section */
+.club-resources h4 {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.club-resources ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.club-resources li {
+    margin: 8px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.club-resources li:before {
+    content: "•";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.club-resources a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.club-resources a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark theme support */
+.theme-dark .joined-content {
+    background-color: #2a2a2a;
+    border-left-color: #5fbe63;
+}
+
+.theme-dark .joined-confirmation h4,
+.theme-dark .joined-confirmation i {
+    color: #5fbe63;
+}
+
+.theme-dark .next-meeting-info h4,
+.theme-dark .club-resources h4 {
+    color: #e0e0e0;
+}
+
+.theme-dark .next-meeting-info p,
+.theme-dark .next-meeting-info i {
+    color: #bbb;
+}
+
+.theme-dark .joined-confirmation,
+.theme-dark .next-meeting-info {
+    border-bottom-color: #444;
+}
+
+.theme-dark .club-resources li:before {
+    color: #5fbe63;
+}
+
+.theme-dark .club-resources a {
+    color: #77aaff;
+}
+
+.theme-dark .club-resources a:hover {
+    color: #99ccff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .joined-content {
+        padding: 15px;
+    }
+    
+    .joined-confirmation i {
+        font-size: 2rem;
+    }
+}

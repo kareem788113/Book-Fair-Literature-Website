@@ -1,0 +1,200 @@
+/**
+ * Header Icons CSS for Elite Readers - Book Fair & Literature Website
+ */
+
+/* Icon Buttons */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--bg-light, #f5f5f5);
+    color: var(--text-color, #333);
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.icon-btn:hover, .icon-btn.active {
+    background-color: var(--primary-color, #4a6fa5);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-btn i {
+    font-size: 1rem;
+}
+
+/* Cart Icon */
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--danger-color, #e74c3c);
+    color: white;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cart-icon:hover .cart-count {
+    transform: scale(1.1);
+}
+
+/* User Actions in Navigation */
+.user-actions {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text-color, #333);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.user-actions a i {
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+.user-actions a:hover, .user-actions a.active {
+    background-color: var(--primary-color, #4a6fa5);
+    color: white;
+}
+
+.user-actions #loginBtn:hover, .user-actions #loginBtn.active {
+    background-color: var(--primary-color, #4a6fa5);
+}
+
+.user-actions #registerBtn:hover, .user-actions #registerBtn.active {
+    background-color: var(--success-color, #27ae60);
+}
+
+.user-actions #profileBtn:hover, .user-actions #profileBtn.active {
+    background-color: var(--primary-color, #4a6fa5);
+}
+
+.user-actions #logoutBtn:hover {
+    background-color: var(--danger-color, #e74c3c);
+}
+
+/* Login Toggle Button (Demo) */
+.login-toggle-btn {
+    transition: all 0.3s ease;
+}
+
+.login-toggle-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .user-actions {
+        margin-left: 0;
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .user-actions a {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/* Dark Theme Overrides */
+.theme-dark .icon-btn {
+    background-color: #333;
+    color: #eee;
+}
+
+.theme-dark .user-actions a {
+    color: #eee;
+}
+
+/* Vintage Theme Overrides */
+.theme-vintage .icon-btn:hover, 
+.theme-vintage .icon-btn.active,
+.theme-vintage .user-actions a:hover,
+.theme-vintage .user-actions a.active,
+.theme-vintage .user-actions #loginBtn:hover, 
+.theme-vintage .user-actions #loginBtn.active,
+.theme-vintage .user-actions #profileBtn:hover, 
+.theme-vintage .user-actions #profileBtn.active {
+    background-color: #8b5a2b;
+}
+
+/* Modern Theme Overrides */
+.theme-modern .icon-btn:hover, 
+.theme-modern .icon-btn.active,
+.theme-modern .user-actions a:hover,
+.theme-modern .user-actions a.active,
+.theme-modern .user-actions #loginBtn:hover, 
+.theme-modern .user-actions #loginBtn.active,
+.theme-modern .user-actions #profileBtn:hover, 
+.theme-modern .user-actions #profileBtn.active {
+    background-color: #ff6b6b;
+}
+
+.cart-count.has-items {
+    animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* User Actions in Navigation */
+.user-actions {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.user-actions a {
+    margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 0.6rem;
+    }
+}

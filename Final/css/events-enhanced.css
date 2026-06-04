@@ -1,0 +1,356 @@
+/* Enhanced Events Page Styling */
+
+/* Featured Events Section */
+.featured-events {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.featured-event {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.featured-event-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.featured-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-event:hover .featured-event-image img {
+    transform: scale(1.05);
+}
+
+.event-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.featured-event-content {
+    padding: 25px;
+    position: relative;
+}
+
+.event-date {
+    position: absolute;
+    top: -40px;
+    left: 25px;
+    width: 80px;
+    height: 80px;
+    background-color: #4a6fa5;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-date .day {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.event-date .month {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.featured-event-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+    padding-left: 90px;
+}
+
+.event-location, .event-time {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 15px;
+}
+
+.event-location i, .event-time i {
+    margin-right: 8px;
+    color: #4a6fa5;
+}
+
+.event-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.event-highlights, .event-schedule, .event-speakers, .event-pricing {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border-left: 4px solid #4a6fa5;
+}
+
+.event-highlights h4, .event-schedule h4, .event-speakers h4, .event-pricing h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.event-highlights ul, .event-schedule ul, .event-pricing ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.event-highlights li, .event-schedule li, .event-pricing li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.event-highlights li i {
+    color: #e74c3c;
+    margin-right: 8px;
+}
+
+.event-schedule li strong {
+    display: inline-block;
+    min-width: 100px;
+    color: #333;
+}
+
+.speaker-avatars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.speaker-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.speaker-avatar:hover {
+    transform: scale(1.1);
+}
+
+.speaker-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-avatar span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4a6fa5;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.event-actions .btn {
+    flex: 1;
+}
+
+/* Theme Support */
+.theme-dark .featured-event {
+    background-color: #2a2a2a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .featured-event-content h3 {
+    color: #fff;
+}
+
+.theme-dark .event-description,
+.theme-dark .event-location,
+.theme-dark .event-time {
+    color: #ccc;
+}
+
+.theme-dark .event-highlights,
+.theme-dark .event-schedule,
+.theme-dark .event-speakers,
+.theme-dark .event-pricing {
+    background-color: #333;
+    border-left-color: #4a6fa5;
+}
+
+.theme-dark .event-highlights h4,
+.theme-dark .event-schedule h4,
+.theme-dark .event-speakers h4,
+.theme-dark .event-pricing h4 {
+    color: #fff;
+}
+
+.theme-dark .event-schedule li strong {
+    color: #ddd;
+}
+
+.theme-vintage .featured-event {
+    background-color: #f8f5e6;
+}
+
+.theme-vintage .event-date {
+    background-color: #8b6b4c;
+}
+
+.theme-vintage .event-location i,
+.theme-vintage .event-time i {
+    color: #8b6b4c;
+}
+
+.theme-vintage .event-highlights,
+.theme-vintage .event-schedule,
+.theme-vintage .event-speakers,
+.theme-vintage .event-pricing {
+    border-left-color: #8b6b4c;
+}
+
+.theme-modern .featured-event {
+    border-radius: 12px;
+}
+
+.theme-modern .event-date {
+    background-color: #6c63ff;
+    border-radius: 12px;
+}
+
+.theme-modern .event-location i,
+.theme-modern .event-time i {
+    color: #6c63ff;
+}
+
+.theme-modern .event-highlights,
+.theme-modern .event-schedule,
+.theme-modern .event-speakers,
+.theme-modern .event-pricing {
+    border-left-color: #6c63ff;
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .featured-event-image {
+        height: 200px;
+    }
+    
+    .event-date {
+        width: 70px;
+        height: 70px;
+        top: -35px;
+    }
+    
+    .event-date .day {
+        font-size: 18px;
+    }
+    
+    .event-date .month {
+        font-size: 14px;
+    }
+    
+    .featured-event-content h3 {
+        font-size: 20px;
+        padding-left: 80px;
+    }
+    
+    .event-actions {
+        flex-direction: column;
+    }
+}
+
+/* Hide View Details buttons in featured events */
+.featured-event .event-actions .btn-primary {
+    display: none;
+}
+
+/* Featured Events Slider Navigation */
+.featured-events-slider {
+    position: relative;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.slider-nav:hover {
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-prev {
+    left: -20px;
+}
+
+.slider-next {
+    right: -20px;
+}
+
+.theme-dark .slider-nav {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #fff;
+}
+
+.theme-dark .slider-nav:hover {
+    background-color: #444;
+}

@@ -1,0 +1,182 @@
+/**
+ * Book Card Layout Fix CSS for LitFest - Book Fair & Literature Website
+ * Fixes layout issues with book cards, especially rating and price overlapping the book title
+ */
+
+/* Reset and fix book card layout */
+.book-item {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100%;
+    padding-bottom: 15px;
+}
+
+.book-cover {
+    grid-row: 1;
+}
+
+.book-info {
+    grid-row: 2 / span 3;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    padding: 15px;
+    gap: 5px;
+}
+
+/* Book title and author */
+.book-badges {
+    grid-row: 1;
+    margin-bottom: 5px;
+}
+
+.book-title {
+    grid-row: 2;
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--heading-color);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6rem;
+}
+
+.book-author {
+    grid-row: 3;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Rating and description */
+.book-rating {
+    grid-row: 4;
+    margin: 8px 0;
+    font-size: 0.85rem;
+    color: #f39c12;
+}
+
+.book-description {
+    grid-row: 5;
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Price and buttons */
+.book-price-container {
+    grid-row: 6;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.book-price {
+    font-weight: 700;
+    color: #2ecc71; /* Bright green for better visibility */
+    margin: 0;
+    font-size: 1.2rem;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.1);
+}
+
+.book-original-price {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+.book-buttons {
+    grid-row: 7;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* List view specific adjustments */
+.search-results.list-view .book-item {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.search-results.list-view .book-cover {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.search-results.list-view .book-info {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto auto;
+    gap: 5px;
+}
+
+.search-results.list-view .book-badges {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.search-results.list-view .book-title {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.search-results.list-view .book-author {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.search-results.list-view .book-rating {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.search-results.list-view .book-description {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+}
+
+.search-results.list-view .book-price-container {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.search-results.list-view .book-buttons {
+    grid-column: 2;
+    grid-row: 6;
+    justify-self: end;
+    align-self: end;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-results.list-view .book-item {
+        grid-template-columns: 80px 1fr;
+    }
+    
+    .search-results.list-view .book-info {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+    
+    .search-results.list-view .book-description {
+        grid-column: 1;
+    }
+    
+    .search-results.list-view .book-buttons {
+        grid-column: 1;
+        grid-row: 7;
+        justify-self: start;
+    }
+}

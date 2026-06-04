@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - LitFest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/enhanced-inputs.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li><a href="books.html" class="nav-books">Books</a></li>
+                    <li><a href="authors.html" class="nav-authors">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="forum.html" class="nav-book-clubs">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="login.html" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="dashboard.html" id="profileBtn" style="display: none;"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Feedback Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Share Your Feedback</h1>
+            <p>Help us improve your LitFest experience by sharing your thoughts and suggestions</p>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-container">
+                <!-- Feedback Form -->
+                <div class="feedback-form-container">
+                    <h2>We Value Your Opinion</h2>
+                    <p class="form-intro">Your feedback helps us enhance our services and create a better experience for all book lovers. Please take a moment to share your thoughts with us.</p>
+                    
+                    <form id="feedback-form" class="styled-form" novalidate>
+                        <div class="form-group">
+                            <label for="feedback-name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="feedback-name" name="name" required>
+                            <div class="error-message" id="feedback-name-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="feedback-email" name="email" required>
+                            <div class="error-message" id="feedback-email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-type">Feedback Type <span class="required">*</span></label>
+                            <select id="feedback-type" name="feedbackType" required>
+                                <option value="">Please select a type</option>
+                                <option value="Website Experience">Website Experience</option>
+                                <option value="Event Feedback">Event Feedback</option>
+                                <option value="Book Selection">Book Selection</option>
+                                <option value="Author Interactions">Author Interactions</option>
+                                <option value="Customer Service">Customer Service</option>
+                                <option value="Suggestion">Suggestion</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div class="error-message" id="feedback-type-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>How would you rate your experience? <span class="required">*</span></label>
+                            <div class="rating-container">
+                                <div class="rating-option">
+                                    <input type="radio" id="rating-5" name="rating" value="5" required>
+                                    <label for="rating-5" class="rating-label">
+                                        <i class="fas fa-star"></i>
+                                        <span>Excellent</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="rating-4" name="rating" value="4">
+                                    <label for="rating-4" class="rating-label">
+                                        <i class="fas fa-star"></i>
+                                        <span>Good</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="rating-3" name="rating" value="3">
+                                    <label for="rating-3" class="rating-label">
+                                        <i class="fas fa-star"></i>
+                                        <span>Average</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="rating-2" name="rating" value="2">
+                                    <label for="rating-2" class="rating-label">
+                                        <i class="fas fa-star"></i>
+                                        <span>Below Average</span>
+                                    </label>
+                                </div>
+                                <div class="rating-option">
+                                    <input type="radio" id="rating-1" name="rating" value="1">
+                                    <label for="rating-1" class="rating-label">
+                                        <i class="fas fa-star"></i>
+                                        <span>Poor</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="rating-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>What aspects of LitFest do you enjoy the most?</label>
+                            <div class="checkbox-group-container">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="aspect-books" name="aspects" value="Book Selection">
+                                    <label for="aspect-books">Book Selection</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="aspect-authors" name="aspects" value="Author Events">
+                                    <label for="aspect-authors">Author Events</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="aspect-website" name="aspects" value="Website">
+                                    <label for="aspect-website">Website</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="aspect-community" name="aspects" value="Community">
+                                    <label for="aspect-community">Community</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="aspect-workshops" name="aspects" value="Workshops">
+                                    <label for="aspect-workshops">Workshops</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="aspect-other" name="aspects" value="Other">
+                                    <label for="aspect-other">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-comments">Your Feedback <span class="required">*</span></label>
+                            <textarea id="feedback-comments" name="comments" rows="6" required></textarea>
+                            <div class="error-message" id="feedback-comments-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-suggestions">Suggestions for Improvement</label>
+                            <textarea id="feedback-suggestions" name="suggestions" rows="4"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="feedback-contact" name="contactConsent">
+                            <label for="feedback-contact">I consent to being contacted about my feedback</label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="feedback-newsletter" name="newsletter">
+                            <label for="feedback-newsletter">Subscribe to our newsletter</label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="feedback-terms" name="terms" required>
+                            <label for="feedback-terms">I agree to the <a href="#">terms and conditions</a> <span class="required">*</span></label>
+                            <div class="error-message" id="feedback-terms-error"></div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-outline">Reset Form</button>
+                            <button type="submit" class="btn btn-primary btn-large">Submit Feedback</button>
+                        </div>
+                    </form>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="feedback-success" class="success-message" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Thank You for Your Feedback!</h3>
+                        <p>We appreciate you taking the time to share your thoughts with us. Your feedback helps us improve the LitFest experience for everyone.</p>
+                        <button id="feedback-send-another" class="btn btn-outline">Submit Another Feedback</button>
+                    </div>
+                </div>
+                
+                <!-- Feedback Sidebar -->
+                <div class="feedback-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Why Your Feedback Matters</h3>
+                        <p>At LitFest, we're committed to creating the best possible experience for book lovers. Your feedback directly influences our decisions and helps us improve in the following ways:</p>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check"></i> Enhancing our website and user experience</li>
+                            <li><i class="fas fa-check"></i> Selecting authors and books for future events</li>
+                            <li><i class="fas fa-check"></i> Planning workshops and activities</li>
+                            <li><i class="fas fa-check"></i> Improving our customer service</li>
+                            <li><i class="fas fa-check"></i> Creating new features and services</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-widget testimonials">
+                        <h3>What Others Are Saying</h3>
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"The author meet-and-greet sessions were the highlight of my LitFest experience. I got to meet my favorite author and have my book signed!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah T.">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sarah T.</h4>
+                                    <p>Book Enthusiast</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"I suggested adding more children's activities last year, and I was thrilled to see a whole new Children's Corner this year. They really listen to feedback!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael R.">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Michael R.</h4>
+                                    <p>Parent & Reader</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3>Contact Us Directly</h3>
+                        <p>Prefer to speak with someone directly? Reach out to our customer service team:</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (123) 456-7890</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>feedback@litfest.com</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-comment"></i>
+                                <span><a href="#">Live Chat</a> (9AM-5PM EST)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Improvements Section -->
+    <section class="improvements-section">
+        <div class="container">
+            <h2>How We've Improved Based on Your Feedback</h2>
+            <div class="improvements-grid">
+                <div class="improvement-card">
+                    <div class="improvement-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-Friendly Website</h3>
+                    <p>We've completely redesigned our website to be fully responsive and mobile-friendly, making it easier to browse books and register for events on any device.</p>
+                </div>
+                <div class="improvement-card">
+                    <div class="improvement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>More Author Q&A Sessions</h3>
+                    <p>Based on popular demand, we've doubled the number of author Q&A sessions and extended their duration to allow for more interaction with attendees.</p>
+                </div>
+                <div class="improvement-card">
+                    <div class="improvement-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Enhanced Children's Area</h3>
+                    <p>We've expanded our children's programming with more interactive storytelling sessions, craft activities, and a dedicated space for young readers.</p>
+                </div>
+                <div class="improvement-card">
+                    <div class="improvement-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Better Food Options</h3>
+                    <p>We've partnered with local restaurants to provide a wider variety of food options, including vegetarian, vegan, and gluten-free choices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Discover the world of literature at our annual Book Fair & Literature Festival. Explore thousands of books, meet your favorite authors, and join literary events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="publishers.html">Publishers</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="forum.html">Book Club</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City, RC 12345</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@litfest.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Stay updated with our latest books and events</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LitFest - Book Fair & Literature. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
+
+

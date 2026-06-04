@@ -1,0 +1,27 @@
+/**
+ * Dashboard fixes and customizations
+ */
+
+/* Hide the Edit Profile button */
+.btn.btn-outline i.fas.fa-cog {
+    display: none;
+}
+
+button.btn.btn-outline i.fas.fa-cog,
+button.btn.btn-outline:has(i.fas.fa-cog) {
+    display: none;
+}
+
+/* Hide the profile image */
+img#profile-image,
+img[src*="randomuser.me"],
+img[alt="User Profile"] {
+    display: none !important;
+}
+
+/* Hide any container that might hold only the profile image */
+.profile-image-container:empty,
+.user-avatar-container:empty,
+.avatar-container:empty {
+    display: none !important;
+}

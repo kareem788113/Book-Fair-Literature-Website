@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - Elite Readers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/social-media.css">
+    <link rel="stylesheet" href="css/books.css">
+    <link rel="stylesheet" href="css/books-improved.css">
+    <link rel="stylesheet" href="css/bookmarks.css">
+    <link rel="stylesheet" href="css/book-categories.css">
+    <link rel="stylesheet" href="css/header-icons.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/book-layout-fix.css">
+    <link rel="stylesheet" href="css/enhanced-elements.css">
+    <link rel="stylesheet" href="css/book-card-fix.css">
+    <link rel="stylesheet" href="css/category-price-fix.css">
+    <link rel="stylesheet" href="css/featured-books.css">
+    <link rel="stylesheet" href="css/books-clean.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li><a href="books.html" class="nav-books active">Books</a></li>
+                    <li><a href="authors.html" class="nav-authors">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="forum.html" class="nav-book-clubs">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="bookmarks.html" title="My Bookmarks"><i class="fas fa-bookmark"></i></a>
+                        <a href="cart.html" class="cart-icon" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                        <a href="login.html" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="dashboard.html" id="profileBtn" style="display: none;"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Books Hero Section -->
+    <section class="page-hero books-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Explore Our Book Collection</h1>
+                <p>Discover thousands of books across various genres, authors, and publishers</p>
+                
+
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5,000+</span>
+                        <span class="stat-label">Books</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1,200+</span>
+                        <span class="stat-label">Authors</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Genres</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section class="books-section">
+        <div class="container">
+            <div class="books-container-full">
+                <!-- Books Content -->
+                <div class="books-content-full">
+                    <!-- Featured Books Section -->
+                    <div class="featured-books-section">
+                        <h3>Featured Books</h3>
+                        <div class="featured-books-list">
+                        <!-- Featured Book 1 -->
+                        <div class="featured-book-item">
+                            <div class="featured-book-cover">
+                                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="The Midnight Library">
+                            </div>
+                            <div class="featured-book-info">
+                                <h4>The Midnight Library</h4>
+                                <p>By Matt Haig</p>
+                                <div class="featured-book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(4.2/5)</span>
+                                </div>
+                                <a href="book-details.html?id=5" class="btn btn-primary btn-small">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Featured Book 2 -->
+                        <div class="featured-book-item">
+                            <div class="featured-book-cover">
+                                <img src="https://images.unsplash.com/photo-1587876931567-564ce588bfbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="The Silent Patient">
+                            </div>
+                            <div class="featured-book-info">
+                                <h4>The Silent Patient</h4>
+                                <p>By Alex Michaelides</p>
+                                <div class="featured-book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(4.5/5)</span>
+                                </div>
+                                <a href="book-details.html?id=1" class="btn btn-primary btn-small">View Details</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Featured Book 3 -->
+                        <div class="featured-book-item">
+                            <div class="featured-book-cover">
+                                <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Where the Crawdads Sing">
+                            </div>
+                            <div class="featured-book-info">
+                                <h4>Where the Crawdads Sing</h4>
+                                <p>By Delia Owens</p>
+                                <div class="featured-book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(4.8/5)</span>
+                                </div>
+                                <a href="book-details.html?id=2" class="btn btn-primary btn-small">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="books-header">
+                        <div class="books-filter">
+                            <span id="books-count">8</span> books found
+
+                            <a href="bookmarks.html" class="bookmarks-link"><i class="fas fa-bookmark"></i> My Bookmarks</a>
+                        </div>
+                        <div class="books-view-options">
+                            <button id="grid-view" class="view-option active"><i class="fas fa-th"></i></button>
+                            <button id="list-view" class="view-option"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Search Bar -->
+                    <div class="book-search-container">
+                        <form id="book-search-form">
+                            <input type="text" id="book-search-input" placeholder="Search for books by title, author, or keyword...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    
+                    <div class="search-results grid-view">
+                        <!-- Book Item: The Silent Patient -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="https://images.unsplash.com/photo-1587876931567-564ce588bfbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="The Silent Patient">
+                                <div class="book-ribbon bestseller">Bestseller</div>
+                                <div class="book-actions">
+                                    <button class="bookmark-btn" data-book-id="1" title="Bookmark this book">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                    <button class="quick-view-btn" data-book-id="1" title="Quick view">
+                                        <i class="far fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <div class="book-badges">
+                                    <span class="book-badge fiction">Fiction</span>
+                                    <span class="book-badge thriller">Thriller</span>
+                                </div>
+                                <h3 class="book-title">The Silent Patient</h3>
+                                <p class="book-author">By <a href="author-details.html?id=1">Alex Michaelides</a></p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(4.5/5)</span>
+                                    <span class="reviews-count">1,245 reviews</span>
+                                </div>
+                                <p class="book-description">A psychological thriller about a woman's act of violence against her husband—and of the therapist obsessed with uncovering her motive.</p>
+                                <div class="book-price-container">
+                                    <p class="book-price">$24.99</p>
+                                    <p class="book-original-price">$29.99</p>
+                                    <span class="discount-badge">17% off</span>
+                                </div>
+                                <div class="book-buttons">
+                                    <a href="book-details.html?id=1" class="btn-small">View Details</a>
+                                    <button class="btn-small btn-primary add-to-cart" data-book-id="1"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Book Item -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1582135294i/36809135.jpg" alt="Where the Crawdads Sing">
+                                <div class="book-ribbon popular">Popular</div>
+                                <div class="book-actions">
+                                    <button class="bookmark-btn" data-book-id="2" title="Bookmark this book">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                    <button class="quick-view-btn" data-book-id="2" title="Quick view">
+                                        <i class="far fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <div class="book-badges">
+                                    <span class="book-badge fiction">Fiction</span>
+                                    <span class="book-badge mystery">Mystery</span>
+                                </div>
+                                <h3 class="book-title">Where the Crawdads Sing</h3>
+                                <p class="book-author">By <a href="author-details.html?id=2">Delia Owens</a></p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(5.0/5)</span>
+                                    <span class="reviews-count">2,345 reviews</span>
+                                </div>
+                                <p class="book-description">A painfully beautiful first novel about a mysterious woman living alone in the marshes of North Carolina who becomes a suspect in a murder investigation.</p>
+                                <div class="book-price-container">
+                                    <p class="book-price">$22.95</p>
+                                </div>
+                                <div class="book-buttons">
+                                    <a href="book-details.html?id=2" class="btn-small">View Details</a>
+                                    <button class="btn-small btn-primary add-to-cart" data-book-id="2"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Book Item -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1506026635i/35133922.jpg" alt="Educated">
+                                <div class="book-ribbon new">New</div>
+                                <div class="book-actions">
+                                    <button class="bookmark-btn" data-book-id="3" title="Bookmark this book">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                    <button class="quick-view-btn" data-book-id="3" title="Quick view">
+                                        <i class="far fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <div class="book-badges">
+                                    <span class="book-badge memoir">Memoir</span>
+                                    <span class="book-badge biography">Biography</span>
+                                </div>
+                                <h3 class="book-title">Educated</h3>
+                                <p class="book-author">By <a href="author-details.html?id=3">Tara Westover</a></p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(4.0/5)</span>
+                                    <span class="reviews-count">1,876 reviews</span>
+                                </div>
+                                <p class="book-description">An unforgettable memoir about a young girl who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge University.</p>
+                                <div class="book-price-container">
+                                    <p class="book-price">$28.00</p>
+                                    <p class="book-original-price">$32.00</p>
+                                    <span class="discount-badge">12% off</span>
+                                </div>
+                                <div class="book-buttons">
+                                    <a href="book-details.html?id=3" class="btn-small">View Details</a>
+                                    <button class="btn-small btn-primary add-to-cart" data-book-id="3"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Book Item -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528206996i/38746485.jpg" alt="Becoming">
+                                <div class="book-ribbon bestseller">Bestseller</div>
+                                <div class="book-actions">
+                                    <button class="bookmark-btn" data-book-id="4" title="Bookmark this book">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                    <button class="quick-view-btn" data-book-id="4" title="Quick view">
+                                        <i class="far fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <div class="book-badges">
+                                    <span class="book-badge memoir">Memoir</span>
+                                    <span class="book-badge autobiography">Autobiography</span>
+                                </div>
+                                <h3 class="book-title">Becoming</h3>
+                                <p class="book-author">By <a href="author-details.html?id=4">Michelle Obama</a></p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(4.5/5)</span>
+                                    <span class="reviews-count">3,456 reviews</span>
+                                </div>
+                                <p class="book-description">An intimate, powerful, and inspiring memoir by the former First Lady of the United States, spanning her childhood to her time in the White House.</p>
+                                <div class="book-price-container">
+                                    <p class="book-price">$32.50</p>
+                                </div>
+                                <div class="book-buttons">
+                                    <a href="book-details.html?id=4" class="btn-small">View Details</a>
+                                    <button class="btn-small btn-primary add-to-cart" data-book-id="4"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Book Item -->
+                        <div class="book-item">
+                            <div class="book-cover">
+                                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1602190253i/52578297.jpg" alt="The Midnight Library">
+                                <div class="book-ribbon popular">Popular</div>
+                                <div class="book-actions">
+                                    <button class="bookmark-btn" data-book-id="5" title="Bookmark this book">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                    <button class="quick-view-btn" data-book-id="5" title="Quick view">
+                                        <i class="far fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <div class="book-badges">
+                                    <span class="book-badge fiction">Fiction</span>
+                                    <span class="book-badge fantasy">Fantasy</span>
+                                </div>
+                                <h3 class="book-title">The Midnight Library</h3>
+                                <p class="book-author">By <a href="author-details.html?id=5">Matt Haig</a></p>
+                                <div class="book-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(4.2/5)</span>
+                                    <span class="reviews-count">2,189 reviews</span>
+                                </div>
+                                <p class="book-description">A dazzling novel about all the choices that go into a life well lived, from the internationally bestselling author of Reasons to Stay Alive.</p>
+                                <div class="book-price-container">
+                                    <p class="book-price">$26.00</p>
+                                    <p class="book-original-price">$30.00</p>
+                                    <span class="discount-badge">13% off</span>
+                                </div>
+                                <div class="book-buttons">
+                                    <a href="book-details.html?id=5" class="btn-small">View Details</a>
+                                    <button class="btn-small btn-primary add-to-cart" data-book-id="5"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="page-link disabled"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <span class="page-ellipsis">...</span>
+                        <a href="#" class="page-link">10</a>
+                        <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Your ultimate destination for all things literature. Discover, read, and connect with the literary world.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Literary City, LC 12345</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@elitereaders.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new books and events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elite Readers - Book Fair & Literature. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/books-data.js"></script>
+    <script src="js/fix-book-images.js"></script>
+    <script src="js/cart-utils.js"></script>
+    <script src="js/books.js"></script>
+    <script src="js/books-layout.js"></script>
+    <script src="js/book-categories.js"></script>
+    <script src="js/quick-view.js"></script>
+    <script src="js/fix-quick-view.js"></script>
+    <script src="js/data-manager.js"></script>
+    <script src="js/fix-buttons.js"></script>
+    
+    <!-- Floating Social Media Bar -->
+    <div class="social-media-floating">
+        <a href="https://facebook.com/elitereaders" class="facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+        <a href="https://twitter.com/elitereaders" class="twitter" target="_blank">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+        </a>
+        <a href="https://instagram.com/elitereaders" class="instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+        <a href="https://linkedin.com/company/elitereaders" class="linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://youtube.com/elitereaders" class="youtube" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+        </a>
+    </div>
+</body>
+</html>
+
+

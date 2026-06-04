@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors - Elite Readers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/social-media.css">
+    <link rel="stylesheet" href="css/authors-publishers.css">
+    <link rel="stylesheet" href="css/author-books.css">
+    <link rel="stylesheet" href="css/site-wide-enhancements.css">
+    <link rel="stylesheet" href="css/enhanced-navigation.css">
+    <link rel="stylesheet" href="css/enhanced-footer.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="enhanced-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Return to Homepage" class="logo-link">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="books.html" class="nav-books">Books <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="books.html?category=fiction">Fiction</a>
+                            <a href="books.html?category=non-fiction">Non-Fiction</a>
+                            <a href="books.html?category=biography">Biography</a>
+                            <a href="books.html?category=children">Children's Books</a>
+                            <a href="book-clubs.html">Book Clubs</a>
+                        </div>
+                    </li>
+                    <li><a href="authors.html" class="nav-authors active">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="book-clubs.html" class="nav-book-clubs">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-actions">
+                <a href="bookmarks.html" class="icon-btn" title="My Bookmarks">
+                    <i class="fas fa-bookmark"></i>
+                    <span class="notification-badge">3</span>
+                </a>
+                <a href="cart.html" class="icon-btn cart-icon" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="profile.html" class="user-profile-link" title="My Profile" style="display: none;">
+                    <i class="fas fa-user"></i> <span class="user-display-name">My Profile</span>
+                </a>
+                <a href="login.html" class="btn-small" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="btn-small btn-primary register-btn">Register</a>
+                <a href="#" class="btn-small logout-btn" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Authors Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Meet Our Authors</h1>
+            <p>Discover talented writers from around the world and explore their literary works</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <form id="author-search-form">
+                    <input type="text" id="author-search-input" placeholder="Search for authors by name or genre...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authors Section -->
+    <section class="authors-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="genre-filter">Filter by Genre:</label>
+                    <select id="genre-filter">
+                        <option value="">All Genres</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Historical Fiction">Historical Fiction</option>
+                        <option value="Self-Help">Self-Help</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort-filter">Sort by:</label>
+                    <select id="sort-filter">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="name-desc">Name (Z-A)</option>
+                        <option value="books">Number of Books</option>
+                        <option value="popularity">Popularity</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="authors-table-container">
+                <table class="authors-table">
+                    <thead>
+                        <tr>
+                            <th>Author</th>
+                            <th>Genres</th>
+                            <th>Books</th>
+                            <th>Awards</th>
+                            <th>Country</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="authors-table-body">
+                        <!-- Authors will be loaded here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pagination" id="authors-pagination">
+                <!-- Pagination will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Authors -->
+    <section class="featured-authors">
+        <div class="container">
+            <h2 class="section-title">Featured Authors</h2>
+            <div class="featured-authors-grid">
+                <div class="featured-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="J.K. Rowling">
+                    </div>
+                    <div class="author-info">
+                        <h3>J.K. Rowling</h3>
+                        <p class="author-genres">Fantasy, Children's Literature</p>
+                        <p class="author-bio">J.K. Rowling is best known as the author of the seven Harry Potter books, which were published between 1997 and 2007.</p>
+                        <a href="#" class="btn btn-outline btn-small author-details-btn" data-author-id="1">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="featured-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Stephen King">
+                    </div>
+                    <div class="author-info">
+                        <h3>Stephen King</h3>
+                        <p class="author-genres">Horror, Thriller, Science Fiction</p>
+                        <p class="author-bio">Stephen King is an American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels.</p>
+                        <a href="#" class="btn btn-outline btn-small author-details-btn" data-author-id="2">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="featured-author">
+                    <div class="author-image">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Agatha Christie">
+                    </div>
+                    <div class="author-info">
+                        <h3>Agatha Christie</h3>
+                        <p class="author-genres">Mystery, Crime Fiction</p>
+                        <p class="author-bio">Agatha Christie is best known for her detective novels and short story collections, particularly those revolving around fictional detectives Hercule Poirot and Miss Marple.</p>
+                        <a href="#" class="btn btn-outline btn-small author-details-btn" data-author-id="3">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Details Modal -->
+    <div id="author-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="author-modal-content">
+                <div class="author-modal-header">
+                    <div class="author-modal-image">
+                        <img id="modal-author-image" src="" alt="Author">
+                    </div>
+                    <div class="author-modal-info">
+                        <h2 id="modal-author-name"></h2>
+                        <p id="modal-author-genres"></p>
+                        <div class="author-stats">
+                            <div class="stat">
+                                <span class="stat-value" id="modal-author-books"></span>
+                                <span class="stat-label">Books</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="modal-author-awards"></span>
+                                <span class="stat-label">Awards</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value" id="modal-author-years"></span>
+                                <span class="stat-label">Years Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="author-modal-bio">
+                    <h3>Biography</h3>
+                    <p id="modal-author-bio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Discover the world of literature at our annual Book Fair & Literature Festival. Explore thousands of books, meet your favorite authors, and join literary events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="publishers.html">Publishers</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City, RC 12345</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@elitereaders.com</p>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elite Readers - Book Fair & Literature. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/authors-data.js"></script>
+    <script src="js/authors.js"></script>
+    <script src="js/fix-author-images.js"></script>
+    
+    <!-- Floating Social Media Bar -->
+    <div class="social-media-floating">
+        <a href="https://facebook.com/elitereaders" class="facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+        <a href="https://twitter.com/elitereaders" class="twitter" target="_blank">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+        </a>
+        <a href="https://instagram.com/elitereaders" class="instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+        <a href="https://linkedin.com/company/elitereaders" class="linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://youtube.com/elitereaders" class="youtube" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+        </a>
+    </div>
+    <!-- Scripts -->
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/user-auth.js"></script>
+    <script src="js/enhanced-navigation.js"></script>
+    <script src="js/enhanced-newsletter.js"></script>
+</body>
+</html>

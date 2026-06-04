@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Elite Readers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard-fixes.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li><a href="books.html" class="nav-books">Books</a></li>
+                    <li><a href="authors.html" class="nav-authors">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="book-clubs.html" class="nav-book-clubs">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="login.html" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="dashboard.html" id="profileBtn" style="display: none;"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Welcome to Your Dashboard, <span id="dashboard-user-name">User</span>!</h1>
+                <p>Manage your account, bookmarks, and activities</p>
+            </div>
+            
+            <div class="dashboard-container">
+                <!-- Dashboard Sidebar -->
+                <div class="dashboard-sidebar">
+                    <div class="user-info">
+
+                        <h3 id="sidebar-user-name">User Name</h3>
+                        <p id="user-role">User</p>
+                        <p id="join-date">Joined: May 20, 2025</p>
+                    </div>
+                    
+                    <ul class="dashboard-nav">
+                        <li class="active"><a href="#overview" data-tab="overview"><i class="fas fa-home"></i> Overview</a></li>
+                        <li><a href="#bookmarks" data-tab="bookmarks"><i class="fas fa-bookmark"></i> My Bookmarks</a></li>
+                        <li><a href="#reviews" data-tab="reviews"><i class="fas fa-star"></i> My Reviews</a></li>
+                        <li><a href="#reading-history" data-tab="reading-history"><i class="fas fa-history"></i> Reading History</a></li>
+                        <li><a href="#settings" data-tab="settings"><i class="fas fa-cog"></i> Account Settings</a></li>
+                        <li id="admin-panel-link" style="display: none;"><a href="#admin" data-tab="admin"><i class="fas fa-user-shield"></i> Admin Panel</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Dashboard Content -->
+                <div class="dashboard-content">
+                    <!-- Overview Tab -->
+                    <div class="dashboard-tab active" id="overview">
+                        <h2>Dashboard Overview</h2>
+                        
+                        <div class="stats-cards">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Bookmarks</h3>
+                                    <p id="bookmarks-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Reviews</h3>
+                                    <p id="reviews-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Books Read</h3>
+                                    <p id="books-read-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Events</h3>
+                                    <p id="events-count">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-activity">
+                            <h3>Recent Activity</h3>
+                            <div class="activity-list" id="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <p>Welcome to Elite Readers! Your account has been created successfully.</p>
+                                        <span class="activity-time">Just now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Bookmarks Tab -->
+                    <div class="dashboard-tab" id="bookmarks">
+                        <h2>My Bookmarks</h2>
+                        <div class="bookmarks-container" id="bookmarks-container">
+                            <div class="empty-state" id="empty-bookmarks">
+                                <i class="fas fa-bookmark"></i>
+                                <h3>No Bookmarks Yet</h3>
+                                <p>You haven't bookmarked any books yet. Browse our collection and bookmark books you're interested in.</p>
+                                <a href="books.html" class="btn btn-primary">Browse Books</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews Tab -->
+                    <div class="dashboard-tab" id="reviews">
+                        <h2>My Reviews</h2>
+                        <div class="reviews-container" id="reviews-container">
+                            <div class="empty-state" id="empty-reviews">
+                                <i class="fas fa-star"></i>
+                                <h3>No Reviews Yet</h3>
+                                <p>You haven't reviewed any books yet. Share your thoughts on books you've read.</p>
+                                <a href="books.html" class="btn btn-primary">Browse Books</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reading History Tab -->
+                    <div class="dashboard-tab" id="reading-history">
+                        <h2>Reading History</h2>
+                        <div class="reading-history-container" id="reading-history-container">
+                            <div class="empty-state" id="empty-reading-history">
+                                <i class="fas fa-book"></i>
+                                <h3>No Reading History</h3>
+                                <p>Your reading history will appear here once you start marking books as read.</p>
+                                <a href="books.html" class="btn btn-primary">Browse Books</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Settings Tab -->
+                    <div class="dashboard-tab" id="settings">
+                        <h2>Account Settings</h2>
+                        
+                        <div class="settings-container">
+                            <form id="profile-settings-form" class="settings-form">
+                                <h3>Profile Information</h3>
+                                
+                                <div class="form-group">
+                                    <label for="settings-name">Full Name</label>
+                                    <input type="text" id="settings-name" name="name">
+                                    <div class="error-message" id="settings-name-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="settings-username">Username</label>
+                                    <input type="text" id="settings-username" name="username">
+                                    <div class="error-message" id="settings-username-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="settings-email">Email Address</label>
+                                    <input type="email" id="settings-email" name="email">
+                                    <div class="error-message" id="settings-email-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="settings-bio">Bio</label>
+                                    <textarea id="settings-bio" name="bio" rows="4"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                            
+                            <form id="password-settings-form" class="settings-form">
+                                <h3>Change Password</h3>
+                                
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" id="current-password" name="currentPassword">
+                                    <div class="error-message" id="current-password-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password" name="newPassword">
+                                    <div class="error-message" id="new-password-error"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirm-new-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-new-password" name="confirmNewPassword">
+                                    <div class="error-message" id="confirm-new-password-error"></div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </form>
+                            
+                            <div class="danger-zone">
+                                <h3>Danger Zone</h3>
+                                <button id="delete-account-btn" class="btn btn-danger">Delete Account</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Admin Panel Tab -->
+                    <div class="dashboard-tab" id="admin">
+                        <h2>Admin Panel</h2>
+                        
+                        <div class="admin-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Users</h3>
+                                    <p id="total-users">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Books</h3>
+                                    <p id="total-books">5</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Reviews</h3>
+                                    <p id="total-reviews">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Total Events</h3>
+                                    <p id="total-events">5</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-tabs">
+                            <div class="admin-tab-links">
+                                <button class="admin-tab-link active" data-tab="manage-users">Manage Users</button>
+                                <button class="admin-tab-link" data-tab="manage-books">Manage Books</button>
+                                <button class="admin-tab-link" data-tab="manage-events">Manage Events</button>
+                                <button class="admin-tab-link" data-tab="manage-reviews">Manage Reviews</button>
+                            </div>
+                            
+                            <div class="admin-tab-content">
+                                <div class="admin-tab-pane active" id="manage-users">
+                                    <h3>Manage Users</h3>
+                                    <div class="admin-table-container">
+                                        <table class="admin-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Name</th>
+                                                    <th>Username</th>
+                                                    <th>Email</th>
+                                                    <th>Role</th>
+                                                    <th>Joined Date</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="users-table-body">
+                                                <!-- User rows will be added dynamically -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="admin-tab-pane" id="manage-books">
+                                    <h3>Manage Books</h3>
+                                    <button class="btn btn-primary add-new-btn" id="add-book-btn">Add New Book</button>
+                                    <div class="admin-table-container">
+                                        <table class="admin-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Cover</th>
+                                                    <th>Title</th>
+                                                    <th>Author</th>
+                                                    <th>Publisher</th>
+                                                    <th>Year</th>
+                                                    <th>Rating</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="books-table-body">
+                                                <!-- Book rows will be added dynamically -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="admin-tab-pane" id="manage-events">
+                                    <h3>Manage Events</h3>
+                                    <button class="btn btn-primary add-new-btn" id="add-event-btn">Add New Event</button>
+                                    <div class="admin-table-container">
+                                        <table class="admin-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Image</th>
+                                                    <th>Title</th>
+                                                    <th>Date</th>
+                                                    <th>Location</th>
+                                                    <th>Featured</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="events-table-body">
+                                                <!-- Event rows will be added dynamically -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="admin-tab-pane" id="manage-reviews">
+                                    <h3>Manage Reviews</h3>
+                                    <div class="admin-table-container">
+                                        <table class="admin-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Book</th>
+                                                    <th>User</th>
+                                                    <th>Rating</th>
+                                                    <th>Review</th>
+                                                    <th>Date</th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="reviews-table-body">
+                                                <!-- Review rows will be added dynamically -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Your ultimate destination for all things literature. Discover, read, and connect with the literary world.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Literary City, LC 12345</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@litfest.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new books and events.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LitFest - Book Fair & Literature. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+
+

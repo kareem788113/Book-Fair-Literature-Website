@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details - LitFest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/book-details.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li><a href="books.html" class="nav-books active">Books</a></li>
+                    <li><a href="authors.html" class="nav-authors">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="forum.html" class="nav-book-clubs">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="login.html" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="dashboard.html" id="profileBtn" style="display: none;"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Book Details -->
+    <section class="book-details-section">
+        <div class="container">
+            <div class="back-to-search">
+                <a href="books.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Search Results</a>
+            </div>
+            
+            <div class="book-details-container">
+                <!-- Book Info -->
+                <div class="book-info">
+                    <div class="book-cover">
+                        <img id="book-cover" src="" alt="Book Cover">
+                        <div id="book-badge" class="book-badge"></div>
+                    </div>
+                    <div class="book-actions">
+                        <button id="bookmark-btn" class="btn btn-outline btn-full">
+                            <i class="far fa-bookmark"></i> <span>Bookmark this Book</span>
+                        </button>
+                        <button id="share-btn" class="btn btn-outline btn-full">
+                            <i class="fas fa-share-alt"></i> Share
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Book Content -->
+                <div class="book-content">
+                    <div class="book-header">
+                        <h1 id="book-title"></h1>
+                        <p class="book-author">by <a id="author-link" href="#"></a></p>
+                        <div class="book-meta">
+                            <div class="book-rating">
+                                <div id="rating-stars" class="rating-stars"></div>
+                                <span id="rating-value"></span>
+                                <span id="rating-count">(0 ratings)</span>
+                            </div>
+                            <div class="book-publisher">
+                                <span id="publisher"></span> | <span id="publish-year"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-price-section">
+                        <div class="current-price">
+                            <span class="price-label">Price:</span>
+                            <span id="book-price" class="price-value"></span>
+                        </div>
+                        <div class="format-options">
+                            <button class="format-btn active" data-format="paperback">Paperback</button>
+                            <button class="format-btn" data-format="hardcover">Hardcover</button>
+                            <button class="format-btn" data-format="ebook">eBook</button>
+                            <button class="format-btn" data-format="audiobook">Audiobook</button>
+                        </div>
+                        <div class="cart-action">
+                            <button id="add-to-cart-btn" class="btn btn-primary add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="book-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-btn active" data-tab="description">Description</button>
+                            <button class="tab-btn" data-tab="details">Details</button>
+                            <button class="tab-btn" data-tab="reviews">Reviews</button>
+                            <button class="tab-btn" data-tab="preview">Preview</button>
+                        </div>
+                        
+                        <div class="tabs-content">
+                            <!-- Description Tab -->
+                            <div id="description" class="tab-content active">
+                                <p id="book-description"></p>
+                            </div>
+                            
+                            <!-- Details Tab -->
+                            <div id="details" class="tab-content">
+                                <div class="book-details-grid">
+                                    <div class="detail-item">
+                                        <h4>Publisher</h4>
+                                        <p id="publisher-detail"></p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Publication Date</h4>
+                                        <p id="publish-date"></p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Language</h4>
+                                        <p>English</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Pages</h4>
+                                        <p id="page-count">336</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>ISBN-13</h4>
+                                        <p id="isbn">9781234567890</p>
+                                    </div>
+                                    <div class="detail-item">
+                                        <h4>Dimensions</h4>
+                                        <p>5.5 x 1.2 x 8.2 inches</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="genres-section">
+                                    <h4>Genres</h4>
+                                    <div id="book-genres" class="genres-list"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Reviews Tab -->
+                            <div id="reviews" class="tab-content">
+                                <div class="reviews-summary">
+                                    <div class="rating-summary">
+                                        <div class="average-rating">
+                                            <span id="average-rating">4.5</span>
+                                            <div class="rating-stars-large" id="average-rating-stars"></div>
+                                            <span id="total-reviews">24 reviews</span>
+                                        </div>
+                                        <div class="rating-bars">
+                                            <div class="rating-bar">
+                                                <span class="rating-label">5 stars</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 70%"></div>
+                                                </div>
+                                                <span class="rating-count">18</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span class="rating-label">4 stars</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 20%"></div>
+                                                </div>
+                                                <span class="rating-count">4</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span class="rating-label">3 stars</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 5%"></div>
+                                                </div>
+                                                <span class="rating-count">1</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span class="rating-label">2 stars</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 5%"></div>
+                                                </div>
+                                                <span class="rating-count">1</span>
+                                            </div>
+                                            <div class="rating-bar">
+                                                <span class="rating-label">1 star</span>
+                                                <div class="bar-container">
+                                                    <div class="bar" style="width: 0%"></div>
+                                                </div>
+                                                <span class="rating-count">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="add-review">
+                                        <h3>Add Your Review</h3>
+                                        <div class="user-rating">
+                                            <span>Your Rating:</span>
+                                            <div class="user-stars">
+                                                <i class="far fa-star" data-rating="1"></i>
+                                                <i class="far fa-star" data-rating="2"></i>
+                                                <i class="far fa-star" data-rating="3"></i>
+                                                <i class="far fa-star" data-rating="4"></i>
+                                                <i class="far fa-star" data-rating="5"></i>
+                                            </div>
+                                        </div>
+                                        <form id="review-form">
+                                            <div class="form-group">
+                                                <label for="review-title">Review Title</label>
+                                                <input type="text" id="review-title" placeholder="Summarize your review">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="review-content">Your Review</label>
+                                                <textarea id="review-content" rows="5" placeholder="Write your review here..."></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                <div class="reviews-list" id="reviews-container">
+                                    <!-- Reviews will be loaded here dynamically -->
+                                </div>
+                            </div>
+                            
+                            <!-- Preview Tab -->
+                            <div id="preview" class="tab-content">
+                                <div class="book-preview">
+                                    <div id="google-preview">
+                                        <!-- Google Books Preview iframe will be inserted here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Price Comparison -->
+            <div class="price-comparison">
+                <h2>Price Comparison</h2>
+                <div class="price-table-container">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Retailer</th>
+                                <th>Format</th>
+                                <th>Price</th>
+                                <th>Buy</th>
+                            </tr>
+                        </thead>
+                        <tbody id="price-comparison-body">
+                            <!-- Price comparison data will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Author Info -->
+            <div class="author-section">
+                <h2>About the Author</h2>
+                <div class="author-container">
+                    <div class="author-image">
+                        <img id="author-image" src="" alt="Author">
+                    </div>
+                    <div class="author-bio">
+                        <h3 id="author-name"></h3>
+                        <p id="author-bio"></p>
+                        <a id="author-more" href="#" class="btn btn-outline">View All Books by This Author</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- End of content -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Discover the world of literature at our annual Book Fair & Literature Festival. Explore thousands of books, meet your favorite authors, and join literary events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City, RC 12345</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@litfest.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Stay updated with our latest books and events</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LitFest - Book Fair & Literature. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/books-data.js"></script>
+    <script src="js/fix-book-images.js"></script>
+    <script src="js/cart-utils.js"></script>
+    <script src="js/book-details.js"></script>
+</body>
+</html>
+

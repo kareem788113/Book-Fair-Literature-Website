@@ -1,0 +1,182 @@
+/**
+ * Taxonomy Styles for LitFest
+ * Provides styling for the book taxonomy sidebar
+ */
+
+/* Books Container Layout */
+.books-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+/* Taxonomy Sidebar */
+.taxonomy-sidebar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    transition: all 0.3s ease;
+}
+
+.taxonomy-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.taxonomy-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+}
+
+.taxonomy-header h3 i {
+    color: var(--primary-color);
+}
+
+/* Taxonomy Groups */
+.taxonomy-group {
+    margin-bottom: 25px;
+}
+
+.taxonomy-group h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding-bottom: 5px;
+    border-bottom: 1px dashed var(--border-color-light);
+}
+
+.taxonomy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.taxonomy-list li {
+    margin-bottom: 8px;
+}
+
+.taxonomy-link {
+    display: block;
+    padding: 6px 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.taxonomy-link:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    padding-left: 12px;
+}
+
+.taxonomy-link.active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+/* Books Content */
+.books-content {
+    width: 100%;
+}
+
+/* Featured Books Section */
+.featured-books-section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.featured-books-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.featured-books-section h3::before {
+    content: '★';
+    color: var(--primary-color);
+}
+
+/* Books Grid */
+.search-results {
+    display: grid;
+    gap: 20px;
+}
+
+.search-results.grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.book-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Styles */
+@media (max-width: 992px) {
+    .books-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .taxonomy-sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        overflow-y: auto;
+        border-radius: 0;
+    }
+    
+    .taxonomy-sidebar.show {
+        display: block;
+    }
+    
+    .mobile-filter-toggle {
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    #show-filters {
+        width: 100%;
+        padding: 10px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 1rem;
+    }
+}

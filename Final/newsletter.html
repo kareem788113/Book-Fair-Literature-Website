@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Subscription - LitFest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li><a href="books.html" class="nav-books">Books</a></li>
+                    <li><a href="authors.html" class="nav-authors">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="forum.html" class="nav-book-clubs">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="login.html" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="dashboard.html" id="profileBtn" style="display: none;"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Newsletter Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Subscribe to Our Newsletter</h1>
+            <p>Stay updated with the latest literary news, book releases, author events, and exclusive offers</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <!-- Newsletter Form -->
+                <div class="newsletter-form-container">
+                    <h2>Join Our Literary Community</h2>
+                    <p class="form-intro">Subscribe to the LitFest newsletter and be the first to know about upcoming events, author appearances, book recommendations, and special promotions.</p>
+                    
+                    <form id="newsletter-subscription-form" class="styled-form" novalidate>
+                        <div class="form-group">
+                            <label for="newsletter-name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="newsletter-name" name="name" required>
+                            <div class="error-message" id="newsletter-name-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="newsletter-email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="newsletter-email" name="email" required>
+                            <div class="error-message" id="newsletter-email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Preferred Format <span class="required">*</span></label>
+                            <div class="radio-group-container">
+                                <div class="radio-group">
+                                    <input type="radio" id="format-html" name="format" value="HTML" required checked>
+                                    <label for="format-html">HTML</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="format-text" name="format" value="Text">
+                                    <label for="format-text">Plain Text</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="format-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Frequency <span class="required">*</span></label>
+                            <div class="radio-group-container">
+                                <div class="radio-group">
+                                    <input type="radio" id="frequency-weekly" name="frequency" value="Weekly" required checked>
+                                    <label for="frequency-weekly">Weekly</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="frequency-biweekly" name="frequency" value="Bi-weekly">
+                                    <label for="frequency-biweekly">Bi-weekly</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="frequency-monthly" name="frequency" value="Monthly">
+                                    <label for="frequency-monthly">Monthly</label>
+                                </div>
+                            </div>
+                            <div class="error-message" id="frequency-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>What topics are you interested in?</label>
+                            <div class="checkbox-group-container">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="topic-fiction" name="topics" value="Fiction">
+                                    <label for="topic-fiction">Fiction</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="topic-nonfiction" name="topics" value="Non-Fiction">
+                                    <label for="topic-nonfiction">Non-Fiction</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="topic-events" name="topics" value="Events">
+                                    <label for="topic-events">Events & Festivals</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="topic-authors" name="topics" value="Authors">
+                                    <label for="topic-authors">Author Interviews</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="topic-reviews" name="topics" value="Reviews">
+                                    <label for="topic-reviews">Book Reviews</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="topic-deals" name="topics" value="Deals">
+                                    <label for="topic-deals">Deals & Promotions</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="newsletter-referral">How did you hear about us?</label>
+                            <select id="newsletter-referral" name="referral">
+                                <option value="">Please select</option>
+                                <option value="Search Engine">Search Engine</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Friend or Family">Friend or Family</option>
+                                <option value="Book Fair">Book Fair</option>
+                                <option value="Advertisement">Advertisement</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="newsletter-comments">Additional Comments</label>
+                            <textarea id="newsletter-comments" name="comments" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter-special-offers" name="specialOffers" checked>
+                            <label for="newsletter-special-offers">I would like to receive special offers and promotions</label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter-terms" name="terms" required>
+                            <label for="newsletter-terms">I agree to the <a href="#">terms and conditions</a> and <a href="#">privacy policy</a> <span class="required">*</span></label>
+                            <div class="error-message" id="newsletter-terms-error"></div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-outline">Reset Form</button>
+                            <button type="submit" class="btn btn-primary btn-large">Subscribe Now</button>
+                        </div>
+                    </form>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="newsletter-success" class="success-message" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Thank You for Subscribing!</h3>
+                        <p>You've successfully subscribed to the LitFest newsletter. Please check your email to confirm your subscription.</p>
+                        <p class="success-note">If you don't see our confirmation email in your inbox, please check your spam or promotions folder.</p>
+                    </div>
+                </div>
+                
+                <!-- Newsletter Benefits -->
+                <div class="newsletter-benefits">
+                    <div class="benefits-widget">
+                        <h3>Why Subscribe?</h3>
+                        <ul class="benefits-list">
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Curated Book Recommendations</h4>
+                                    <p>Receive personalized book recommendations based on your reading preferences and interests.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Event Notifications</h4>
+                                    <p>Get early notifications about upcoming author events, book signings, and literary festivals.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Exclusive Discounts</h4>
+                                    <p>Enjoy subscriber-only discounts on books, event tickets, and merchandise.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Early Access</h4>
+                                    <p>Get early access to new releases, limited edition books, and special collections.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Author Interviews</h4>
+                                    <p>Read exclusive interviews with bestselling authors and emerging literary talents.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="benefit-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="benefit-content">
+                                    <h4>Community Connection</h4>
+                                    <p>Connect with a community of fellow book lovers and literary enthusiasts.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="newsletter-preview">
+                        <h3>Preview Our Newsletter</h3>
+                        <div class="preview-image">
+                            <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Newsletter Preview">
+                            <div class="preview-overlay">
+                                <a href="#" class="btn btn-outline">View Sample Newsletter</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonials-widget">
+                        <h3>What Our Subscribers Say</h3>
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"The LitFest newsletter is the highlight of my inbox each week. The book recommendations are always spot-on, and I've discovered so many amazing authors I wouldn't have found otherwise."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Emma L.">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Emma L.</h4>
+                                    <p>Subscriber since 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial">
+                            <div class="testimonial-content">
+                                <p>"Thanks to the event notifications in the newsletter, I've never missed an author signing or literary event in my area. The exclusive subscriber discounts have saved me a lot on books too!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="James K.">
+                                </div>
+                                <div class="author-info">
+                                    <h4>James K.</h4>
+                                    <p>Subscriber since 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How often will I receive the newsletter?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can choose your preferred frequency during subscription: weekly, bi-weekly, or monthly. You can change this preference at any time by updating your subscription settings.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I customize the content I receive?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! When you subscribe, you can select your topics of interest. We'll tailor the content of your newsletter based on these preferences. You can update these preferences at any time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I unsubscribe if I no longer want to receive the newsletter?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can unsubscribe at any time by clicking the "Unsubscribe" link at the bottom of any newsletter email. You can also contact our support team at support@litfest.com for assistance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my email address shared with third parties?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, we respect your privacy. Your email address and personal information will never be shared with third parties without your explicit consent. Please refer to our Privacy Policy for more details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>I'm not receiving the newsletter. What should I do?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>First, check your spam or promotions folder. If you still can't find it, please contact us at support@litfest.com, and we'll help troubleshoot the issue. You might need to add our email address to your safe senders list.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Discover the world of literature at our annual Book Fair & Literature Festival. Explore thousands of books, meet your favorite authors, and join literary events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="publishers.html">Publishers</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="forum.html">Book Club</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City, RC 12345</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@litfest.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Stay updated with our latest books and events</p>
+                    <form id="footer-newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LitFest - Book Fair & Literature. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - LitFest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/themes.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="theme-default admin-body">
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-left">
+            <div class="admin-logo">
+                <a href="../index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <button id="toggle-sidebar" class="toggle-sidebar-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="admin-header-right">
+            <div class="admin-search">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="admin-notifications">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="notification-dropdown">
+                    <div class="notification-header">
+                        <h3>Notifications</h3>
+                        <button class="mark-all-read">Mark all as read</button>
+                    </div>
+                    <div class="notification-list">
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p>New user registration: <strong>Sarah Johnson</strong></p>
+                                <span class="notification-time">10 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p>New feedback submission from <strong>Michael Brown</strong></p>
+                                <span class="notification-time">45 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item unread">
+                            <div class="notification-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p>New contact form submission</p>
+                                <span class="notification-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="notification-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="notification-content">
+                                <p>New book order: <strong>The Midnight Library</strong></p>
+                                <span class="notification-time">Yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification-footer">
+                        <a href="notifications.html">View all notifications</a>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-profile">
+                <button class="profile-btn">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Admin User">
+                    <span>Admin User</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="profile-dropdown">
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                        <li><a href="../index.html"><i class="fas fa-globe"></i> View Website</a></li>
+                        <li><a href="../index.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Main Container -->
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="books.html"><i class="fas fa-book"></i> Books</a>
+                    </li>
+                    <li>
+                        <a href="authors.html"><i class="fas fa-user-edit"></i> Authors</a>
+                    </li>
+                    <li>
+                        <a href="publishers.html"><i class="fas fa-building"></i> Publishers</a>
+                    </li>
+                    <li>
+                        <a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a>
+                    </li>
+                    <li>
+                        <a href="blog-posts.html"><i class="fas fa-newspaper"></i> Blog Posts</a>
+                    </li>
+                    <li>
+                        <a href="forum-posts.html"><i class="fas fa-comments"></i> Forum Posts</a>
+                    </li>
+                    <li>
+                        <a href="users.html"><i class="fas fa-users"></i> Users</a>
+                    </li>
+                    <li>
+                        <a href="submissions.html"><i class="fas fa-inbox"></i> Form Submissions</a>
+                    </li>
+                    <li>
+                        <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2025 LitFest Admin</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <div class="page-actions">
+                    <button class="btn btn-outline"><i class="fas fa-download"></i> Export Data</button>
+                    <button class="btn btn-primary"><i class="fas fa-sync-alt"></i> Refresh</button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(52, 152, 219, 0.1); color: #3498db;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Total Books</h3>
+                        <p class="stat-number">124</p>
+                        <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 12% from last month</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(46, 204, 113, 0.1); color: #2ecc71;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Registered Users</h3>
+                        <p class="stat-number">1,254</p>
+                        <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 8% from last month</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(155, 89, 182, 0.1); color: #9b59b6;">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Blog Posts</h3>
+                        <p class="stat-number">48</p>
+                        <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 5% from last month</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(230, 126, 34, 0.1); color: #e67e22;">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Forum Posts</h3>
+                        <p class="stat-number">287</p>
+                        <p class="stat-change positive"><i class="fas fa-arrow-up"></i> 15% from last month</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity & Quick Actions -->
+            <div class="dashboard-grid">
+                <!-- Recent Activity -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>Recent Activity</h2>
+                        <button class="btn btn-text">View All</button>
+                    </div>
+                    <div class="card-content">
+                        <ul class="activity-list">
+                            <li class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Sarah Johnson</strong> registered a new account</p>
+                                    <span class="activity-time">10 minutes ago</span>
+                                </div>
+                            </li>
+                            <li class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Admin User</strong> added a new book: <strong>The Midnight Library</strong></p>
+                                    <span class="activity-time">45 minutes ago</span>
+                                </div>
+                            </li>
+                            <li class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Michael Brown</strong> submitted a new feedback form</p>
+                                    <span class="activity-time">1 hour ago</span>
+                                </div>
+                            </li>
+                            <li class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-user-edit"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Admin User</strong> updated author profile: <strong>J.K. Rowling</strong></p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </li>
+                            <li class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <p><strong>Admin User</strong> published a new blog post: <strong>Top 10 Must-Read Books of 2025</strong></p>
+                                    <span class="activity-time">3 hours ago</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>Quick Actions</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="quick-actions-grid">
+                            <a href="books.html" class="quick-action-card">
+                                <div class="quick-action-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h3>Add New Book</h3>
+                            </a>
+                            <a href="authors.html" class="quick-action-card">
+                                <div class="quick-action-icon">
+                                    <i class="fas fa-user-edit"></i>
+                                </div>
+                                <h3>Add New Author</h3>
+                            </a>
+                            <a href="blog-posts.html" class="quick-action-card">
+                                <div class="quick-action-icon">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <h3>Create Blog Post</h3>
+                            </a>
+                            <a href="events.html" class="quick-action-card">
+                                <div class="quick-action-icon">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </div>
+                                <h3>Schedule Event</h3>
+                            </a>
+                            <a href="users.html" class="quick-action-card">
+                                <div class="quick-action-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <h3>Add New User</h3>
+                            </a>
+                            <a href="settings.html" class="quick-action-card">
+                                <div class="quick-action-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <h3>Site Settings</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Books & Form Submissions -->
+            <div class="dashboard-grid">
+                <!-- Recent Books -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>Recently Added Books</h2>
+                        <button class="btn btn-text">View All Books</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Cover</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Genre</th>
+                                        <th>Added Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-books-table">
+                                    <!-- Table rows will be populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Form Submissions -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>Recent Form Submissions</h2>
+                        <button class="btn btn-text">View All Submissions</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Email</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recent-submissions-table">
+                                    <!-- Table rows will be populated dynamically -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/theme-switcher.js"></script>
+    <script src="../js/admin/admin.js"></script>
+    <script src="../js/admin/dashboard.js"></script>
+</body>
+</html>

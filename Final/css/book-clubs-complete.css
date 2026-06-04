@@ -1,0 +1,742 @@
+/* Book Clubs Complete CSS - Comprehensive styling for book clubs page */
+
+/* Main Book Clubs Section */
+.book-clubs-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.book-club-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.book-club-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.book-club-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.book-club-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-club-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.book-club-card:hover .book-club-image img {
+    transform: scale(1.05);
+}
+
+.book-club-genre {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.book-club-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-club-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.book-club-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.book-club-description {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.book-club-meeting {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.book-club-meeting i {
+    margin-right: 5px;
+}
+
+.book-club-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.book-club-members {
+    display: flex;
+    align-items: center;
+}
+
+.book-club-members i {
+    margin-right: 5px;
+    color: #666;
+}
+
+.join-button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.join-button:hover {
+    background-color: #3a5a8c;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #4a6fa5;
+    color: white;
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.step p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    font-size: 40px;
+    color: #4a6fa5;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 18px;
+}
+
+.benefit-card p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Virtual Clubs Section */
+.virtual-clubs-section {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.virtual-clubs-container {
+    margin-top: 40px;
+}
+
+.virtual-club {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.virtual-club:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.virtual-club-icon {
+    font-size: 30px;
+    color: #4a6fa5;
+    background-color: #f0f5ff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.virtual-club-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
+}
+
+.virtual-club-content p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.virtual-club-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.virtual-club-details span {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.virtual-club-details i {
+    margin-right: 5px;
+    color: #4a6fa5;
+}
+
+/* Start Club Section */
+.start-club-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.start-club-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.start-club-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.start-club-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+.start-club-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.club-benefits {
+    margin-top: 30px;
+}
+
+.club-benefit {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.club-benefit i {
+    color: #4a6fa5;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+.club-benefit-content h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.club-benefit-content p {
+    color: #666;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.start-club-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.start-club-form h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Start Club Banner */
+.start-club-banner {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.start-club-banner h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.start-club-banner p {
+    max-width: 800px;
+    margin: 0 auto 25px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.btn-large {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-content {
+    position: relative;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-content::before,
+.testimonial-content::after {
+    content: '"';
+    font-size: 50px;
+    color: #e1e1e1;
+    position: absolute;
+    line-height: 1;
+}
+
+.testimonial-content::before {
+    top: -20px;
+    left: 0;
+}
+
+.testimonial-content::after {
+    bottom: -40px;
+    right: 0;
+}
+
+.testimonial-content p {
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.testimonial-author-info h4 {
+    margin: 0 0 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.testimonial-author-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Featured Book Club */
+.featured-book-clubs {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.featured-club-content {
+    margin-top: 40px;
+}
+
+.featured-club-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 24px;
+}
+
+.featured-club-content .lead {
+    color: #4a6fa5;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.featured-club-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.featured-club-content p strong {
+    color: #333;
+}
+
+.featured-club-content img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .start-club-container {
+        flex-direction: column;
+    }
+    
+    .featured-club-content .row {
+        flex-direction: column;
+    }
+    
+    .featured-club-content .col-md-6 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-club-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .steps-container {
+        flex-direction: column;
+    }
+    
+    .step {
+        margin-bottom: 20px;
+    }
+    
+    .virtual-club {
+        flex-direction: column;
+    }
+    
+    .virtual-club-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .testimonials-container {
+        flex-direction: column;
+    }
+}
+
+/* Theme Variations */
+/* Dark Theme */
+.theme-dark .book-clubs-section,
+.theme-dark .benefits-section,
+.theme-dark .start-club-section,
+.theme-dark .featured-book-clubs {
+    background-color: #222;
+}
+
+.theme-dark .how-it-works-section,
+.theme-dark .virtual-clubs-section,
+.theme-dark .testimonials-section {
+    background-color: #1a1a1a;
+}
+
+.theme-dark .book-club-card,
+.theme-dark .start-club-form,
+.theme-dark .benefit-card {
+    background-color: #333;
+}
+
+.theme-dark .step,
+.theme-dark .virtual-club,
+.theme-dark .testimonial {
+    background-color: #2a2a2a;
+}
+
+.theme-dark .book-club-content h3,
+.theme-dark .step h3,
+.theme-dark .benefit-card h3,
+.theme-dark .virtual-club-content h3,
+.theme-dark .start-club-content h2,
+.theme-dark .start-club-form h3,
+.theme-dark .featured-club-content h3,
+.theme-dark .testimonial-author-info h4,
+.theme-dark .club-benefit-content h4 {
+    color: #fff;
+}
+
+.theme-dark .book-club-description,
+.theme-dark .book-club-meta,
+.theme-dark .book-club-meeting,
+.theme-dark .step p,
+.theme-dark .benefit-card p,
+.theme-dark .virtual-club-content p,
+.theme-dark .virtual-club-details span,
+.theme-dark .start-club-content p,
+.theme-dark .club-benefit-content p,
+.theme-dark .featured-club-content p,
+.theme-dark .testimonial-content p,
+.theme-dark .testimonial-author-info p {
+    color: #ccc;
+}
+
+.theme-dark .book-club-footer,
+.theme-dark .form-group input,
+.theme-dark .form-group select,
+.theme-dark .form-group textarea {
+    border-color: #444;
+}
+
+.theme-dark .form-group input,
+.theme-dark .form-group select,
+.theme-dark .form-group textarea {
+    background-color: #444;
+    color: #eee;
+}
+
+.theme-dark .form-group label {
+    color: #eee;
+}
+
+.theme-dark .virtual-club-icon {
+    background-color: #2c4268;
+    color: #6a8cc5;
+}
+
+/* Vintage Theme */
+.theme-vintage .book-club-card,
+.theme-vintage .start-club-form,
+.theme-vintage .benefit-card {
+    background-color: #f8f5e6;
+}
+
+.theme-vintage .step,
+.theme-vintage .virtual-club,
+.theme-vintage .testimonial {
+    background-color: #f5efe0;
+}
+
+.theme-vintage .step-number,
+.theme-vintage .start-club-banner,
+.theme-vintage .join-button {
+    background-color: #8b5a2b;
+}
+
+.theme-vintage .join-button:hover {
+    background-color: #6a4420;
+}
+
+.theme-vintage .benefit-icon,
+.theme-vintage .virtual-club-icon i,
+.theme-vintage .virtual-club-details i,
+.theme-vintage .club-benefit i {
+    color: #8b5a2b;
+}
+
+.theme-vintage .virtual-club-icon {
+    background-color: #f9f5e9;
+}
+
+/* Modern Theme */
+.theme-modern .step-number,
+.theme-modern .start-club-banner,
+.theme-modern .join-button {
+    background-color: #ff6b6b;
+}
+
+.theme-modern .join-button:hover {
+    background-color: #e05050;
+}
+
+.theme-modern .benefit-icon,
+.theme-modern .virtual-club-icon i,
+.theme-modern .virtual-club-details i,
+.theme-modern .club-benefit i {
+    color: #ff6b6b;
+}
+
+.theme-modern .virtual-club-icon {
+    background-color: #fff0f0;
+}
+
+.theme-modern .featured-club-content .lead {
+    color: #ff6b6b;
+}

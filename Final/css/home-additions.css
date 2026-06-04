@@ -1,0 +1,142 @@
+/* 
+   Additional Styles for LitFest Home Page
+   Author: Cascade AI
+   Date: May 21, 2025
+*/
+
+/* ===== BOOKS & READING BANNER ===== */
+.books-reading-banner {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.books-reading-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.books-reading-text {
+    flex: 1;
+    padding-right: var(--spacing-xl);
+}
+
+.books-reading-text h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-color);
+}
+
+.books-reading-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-color);
+}
+
+.books-reading-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.books-reading-image {
+    flex: 1;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.books-reading-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.books-reading-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Enhanced Social Icons */
+.social-icons {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--light-text);
+    font-size: 1.2rem;
+    transition: all var(--transition-normal);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.social-icons a:nth-child(1):hover {
+    background-color: #3b5998; /* Facebook */
+}
+
+.social-icons a:nth-child(2):hover {
+    background-color: #1da1f2; /* Twitter */
+}
+
+.social-icons a:nth-child(3):hover {
+    background-color: #e1306c; /* Instagram */
+}
+
+.social-icons a:nth-child(4):hover {
+    background-color: #ff0000; /* YouTube */
+}
+
+.social-icons a:nth-child(5):hover {
+    background-color: #e60023; /* Pinterest */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .books-reading-content {
+        flex-direction: column;
+    }
+    
+    .books-reading-text, 
+    .books-reading-image {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+    .books-reading-image {
+        margin-top: var(--spacing-lg);
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .books-reading-text h2 {
+        font-size: 2rem;
+    }
+    
+    .books-reading-actions {
+        flex-direction: column;
+    }
+    
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,399 @@
+/* 
+   Authentication Stylesheet for LitFest - Book Fair & Literature Website
+   Author: Cascade AI
+   Date: May 20, 2025
+*/
+
+/* ===== AUTH CONTAINER STYLES ===== */
+.auth-section {
+    padding: 60px 0;
+    background-color: var(--light-bg);
+    min-height: calc(100vh - var(--header-height) - 300px);
+    display: flex;
+    align-items: center;
+}
+
+.auth-container {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    overflow: hidden;
+}
+
+.auth-header {
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.auth-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.auth-header p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.auth-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.input-with-icon input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.input-with-icon input.error {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.form-error {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: var(--error-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 20px;
+    display: none;
+}
+
+.form-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--success-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 20px;
+    display: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.remember-me label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.terms-agreement {
+    display: flex;
+    align-items: flex-start;
+}
+
+.terms-agreement input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.terms-agreement label {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.terms-agreement a {
+    color: var(--primary-color);
+}
+
+.terms-agreement a:hover {
+    text-decoration: underline;
+}
+
+.login-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.login-separator::before,
+.login-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.login-separator span {
+    padding: 0 10px;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.demo-accounts {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.demo-accounts p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.demo-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-demo {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.auth-footer {
+    padding: 20px 30px;
+    text-align: center;
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+.auth-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Password Strength Meter */
+.password-strength {
+    margin-top: 10px;
+}
+
+.strength-meter {
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.strength-meter-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 2px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-meter-fill.weak {
+    width: 25%;
+    background-color: var(--error-color);
+}
+
+.strength-meter-fill.medium {
+    width: 50%;
+    background-color: var(--warning-color);
+}
+
+.strength-meter-fill.strong {
+    width: 75%;
+    background-color: var(--info-color);
+}
+
+.strength-meter-fill.very-strong {
+    width: 100%;
+    background-color: var(--success-color);
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Role Selector */
+.role-selector {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.role-option {
+    flex: 1;
+    cursor: pointer;
+}
+
+.role-option input[type="radio"] {
+    display: none;
+}
+
+.role-card {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.role-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.role-card span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.role-card p {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin: 0;
+}
+
+.role-option input[type="radio"]:checked + .role-card {
+    border-color: var(--primary-color);
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .auth-container {
+        max-width: 100%;
+        margin: 0 15px;
+    }
+    
+    .role-selector {
+        flex-direction: column;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .forgot-password {
+        margin-top: 10px;
+    }
+    
+    .demo-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Theme-specific Adjustments */
+.theme-dark .auth-container {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--border-color);
+}
+
+.theme-dark .input-with-icon input {
+    background-color: var(--light-bg);
+}
+
+.theme-vintage .auth-container {
+    border: 2px solid var(--border-color);
+}
+
+.theme-vintage .auth-header {
+    border-bottom: 2px solid var(--border-color);
+}
+
+.theme-vintage .input-with-icon input {
+    border-width: 2px;
+}
+
+.theme-modern .auth-container {
+    border-radius: 0;
+}
+
+.theme-modern .input-with-icon input,
+.theme-modern .btn {
+    border-radius: 0;
+}
+
+.theme-modern .auth-header h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

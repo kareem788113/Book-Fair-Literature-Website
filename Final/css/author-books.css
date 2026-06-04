@@ -1,0 +1,146 @@
+/**
+ * Author Books CSS for LitFest
+ * Enhances the display of books in author details view
+ */
+
+/* Book Grid Improvements */
+.author-books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* Book Item Styling */
+.book-item-small {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--bg-color);
+}
+
+.book-item-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Cover Styling */
+.book-cover-small {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.book-cover-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-item-small:hover .book-cover-small img {
+    transform: scale(1.05);
+}
+
+/* Book Hover Overlay */
+.book-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.book-item-small:hover .book-hover-overlay {
+    opacity: 1;
+}
+
+.book-view-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.book-view-btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Book Title and Author */
+.book-title-small {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.8em;
+}
+
+.book-author-small {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+/* Book Rating */
+.book-rating-small {
+    display: flex;
+    gap: 2px;
+    font-size: 0.8rem;
+    color: #ffc107;
+    margin-top: 5px;
+}
+
+/* View All Mobile Button */
+.view-all-mobile {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .author-books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .book-cover-small {
+        height: 180px;
+    }
+    
+    .view-all-mobile {
+        display: block;
+    }
+    
+    .author-modal-footer {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .author-books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

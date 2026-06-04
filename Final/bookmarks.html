@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookmarked Books - LitFest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/books.css">
+    <link rel="stylesheet" href="css/bookmarks.css">
+    <link rel="stylesheet" href="css/site-wide-enhancements.css">
+    <link rel="stylesheet" href="css/enhanced-navigation.css">
+    <link rel="stylesheet" href="css/enhanced-footer.css">
+    <link rel="stylesheet" href="css/enhanced-bookmarks.css">
+    <link rel="stylesheet" href="css/book-categories.css">
+    <link rel="stylesheet" href="css/header-icons.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/book-layout-fix.css">
+    <link rel="stylesheet" href="css/enhanced-elements.css">
+    <link rel="stylesheet" href="css/books-improved.css">
+    <link rel="stylesheet" href="css/book-card-fix.css">
+    <link rel="stylesheet" href="css/category-price-fix.css">
+    <link rel="stylesheet" href="css/enhanced-shopping.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="enhanced-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span>Elite Readers</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li class="dropdown">
+                        <a href="books.html" class="active">Books <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="books.html?category=fiction">Fiction</a>
+                            <a href="books.html?category=non-fiction">Non-Fiction</a>
+                            <a href="books.html?category=biography">Biography</a>
+                            <a href="books.html?category=children">Children's Books</a>
+                            <a href="book-clubs.html">Book Clubs</a>
+                        </div>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </nav>
+            <div class="header-actions">
+                <a href="bookmarks.html" class="icon-btn active" title="My Bookmarks">
+                    <i class="fas fa-bookmark"></i>
+                    <span class="notification-badge">3</span>
+                </a>
+                <a href="cart.html" class="icon-btn cart-icon" title="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="profile.html" class="user-profile-link" title="My Profile" style="display: none;">
+                    <i class="fas fa-user"></i> <span class="user-display-name">My Profile</span>
+                </a>
+                <a href="login.html" class="btn-small" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="register.html" class="btn-small btn-primary register-btn">Register</a>
+                <a href="#" class="btn-small logout-btn" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Banner -->
+        <section class="page-banner bookmarks-banner">
+            <div class="container">
+                <h1>My Bookmarked Books</h1>
+                <p>Your personal collection of favorite books for future reference</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section class="books-section">
+            <div class="container">
+                <div class="books-header">
+                    <div class="books-filter">
+                        <div class="books-count-wrapper">
+                            <span id="books-count">0</span> books bookmarked
+                        </div>
+                        <a href="books.html" class="back-to-books-link"><i class="fas fa-arrow-left"></i> Back to Books</a>
+                    </div>
+                    <div class="view-options">
+                        <button id="grid-view" class="view-btn active" title="Grid View">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button id="list-view" class="view-btn" title="List View">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="search-results grid-view">
+                    <!-- Bookmarked books will be loaded here dynamically -->
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading your bookmarked books...</p>
+                    </div>
+                </div>
+                
+                <!-- Empty State (will be shown when no bookmarks exist) -->
+                <div class="empty-state" style="display: none;">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    <h2 class="empty-state-title">No Bookmarked Books</h2>
+                    <p class="empty-state-text">You haven't bookmarked any books yet. Browse our collection and bookmark books you're interested in.</p>
+                    <a href="books.html" class="browse-books-btn"><i class="fas fa-book"></i> Browse Books</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo modern-footer-logo">
+                    <div class="logo-container">
+                        <h3>Elite Readers</h3>
+                    </div>
+                    <p>Celebrating the world of literature and books since 2025</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="speakers.html">Speakers</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elite Readers. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/user-auth.js"></script>
+    <script src="js/books-data.js"></script>
+    <script src="js/fix-book-images.js"></script>
+    <script src="js/bookmarks.js"></script>
+    <script src="js/books-layout.js"></script>
+    <script src="js/quick-view.js"></script>
+    <script src="js/fix-quick-view.js"></script>
+    <script src="js/cart-utils.js"></script>
+    <script src="js/data-manager.js"></script>
+    <script src="js/enhanced-navigation.js"></script>
+    <script src="js/enhanced-newsletter.js"></script>
+    <script src="js/enhanced-bookmarks.js"></script>
+</body>
+</html>

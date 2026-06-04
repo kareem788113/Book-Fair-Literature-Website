@@ -1,0 +1,50 @@
+/**
+ * Book Club Clickable Styles
+ * Styling for clickable book club cards that redirect to forum
+ */
+
+/* Clickable book club card styling */
+.book-club-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.book-club-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-club-card::after {
+    content: "Click to view discussions";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.book-club-card:hover::after {
+    opacity: 1;
+}
+
+/* Ensure join button still works properly */
+.book-club-card .join-button {
+    position: relative;
+    z-index: 10;
+}
+
+.book-club-card .join-button:focus {
+    outline: 2px solid #4a6fa5;
+}
+
+/* Stop propagation for join button clicks */
+.book-club-card .join-button,
+.book-club-card .joined-content {
+    pointer-events: auto;
+}

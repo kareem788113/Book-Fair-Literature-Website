@@ -1,0 +1,118 @@
+/* Floating Social Media Bar */
+.social-media-floating {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media-floating a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4a6fa5;
+    color: white;
+    margin-bottom: 2px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.social-media-floating a:hover {
+    width: 120px;
+}
+
+.social-media-floating a span {
+    padding-left: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.social-media-floating a:hover span {
+    opacity: 1;
+}
+
+.social-media-floating a.facebook {
+    background-color: #3b5998;
+}
+
+.social-media-floating a.twitter {
+    background-color: #1da1f2;
+}
+
+.social-media-floating a.instagram {
+    background-color: #e1306c;
+}
+
+.social-media-floating a.linkedin {
+    background-color: #0077b5;
+}
+
+.social-media-floating a.youtube {
+    background-color: #ff0000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-media-floating {
+        bottom: 0;
+        top: auto;
+        left: 0;
+        right: 0;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .social-media-floating a {
+        width: 20%;
+        margin-bottom: 0;
+        margin-right: 1px;
+        height: 40px;
+    }
+    
+    .social-media-floating a:hover {
+        width: 20%;
+    }
+    
+    .social-media-floating a span {
+        display: none;
+    }
+}
+
+/* Theme Support */
+.theme-dark .social-media-floating a {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.theme-vintage .social-media-floating a.facebook {
+    background-color: #8b6b4c;
+}
+
+.theme-vintage .social-media-floating a.twitter {
+    background-color: #8b6b4c;
+}
+
+.theme-vintage .social-media-floating a.instagram {
+    background-color: #8b6b4c;
+}
+
+.theme-vintage .social-media-floating a.linkedin {
+    background-color: #8b6b4c;
+}
+
+.theme-vintage .social-media-floating a.youtube {
+    background-color: #8b6b4c;
+}
+
+.theme-modern .social-media-floating a {
+    border-radius: 0 5px 5px 0;
+}

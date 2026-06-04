@@ -1,0 +1,498 @@
+/**
+ * Improved Books Page Styles for LitFest - Book Fair & Literature Website
+ * Enhanced layout and organization for book listings
+ */
+
+/* Improved Books Container Layout */
+.books-container {
+    padding: 2rem 0;
+}
+
+.books-content {
+    width: 100%;
+}
+
+/* Enhanced Books Header */
+.books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.books-count {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.books-view-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-option {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+}
+
+.view-option.active, .view-option:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Improved Grid Layout */
+.search-results {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-results.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.list-view {
+    grid-template-columns: 1fr;
+}
+
+/* Enhanced Book Item */
+.book-item {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Book Cover Improvements */
+.book-cover {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 2/3;
+    background-color: #f5f5f5; /* Fallback color if image fails to load */
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.book-item:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+/* Enhanced Ribbons */
+.book-ribbon {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.book-ribbon.bestseller {
+    background-color: #e74c3c;
+}
+
+.book-ribbon.new {
+    background-color: #2ecc71;
+}
+
+.book-ribbon.popular {
+    background-color: #f39c12;
+}
+
+.book-ribbon.sale {
+    background-color: #9b59b6;
+}
+
+/* Book Actions */
+.book-actions {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.book-item:hover .book-actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.book-actions button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    transition: all 0.2s ease;
+}
+
+.book-actions button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Book Info Improvements */
+.book-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.book-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.book-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.book-badge.fiction {
+    background-color: rgba(63, 81, 181, 0.1);
+    color: #3f51b5;
+}
+
+.book-badge.thriller {
+    background-color: rgba(233, 30, 99, 0.1);
+    color: #e91e63;
+}
+
+.book-badge.mystery {
+    background-color: rgba(156, 39, 176, 0.1);
+    color: #9c27b0;
+}
+
+.book-badge.fantasy {
+    background-color: rgba(0, 150, 136, 0.1);
+    color: #009688;
+}
+
+.book-badge.non-fiction {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+}
+
+.book-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+.book-author a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.book-author a:hover {
+    text-decoration: underline;
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.book-rating i {
+    color: #f1c40f;
+}
+
+.rating-count, .reviews-count {
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-left: 0.25rem;
+}
+
+.book-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.book-price-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.book-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.book-original-price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.discount-badge {
+    font-size: 0.75rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.book-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.book-buttons .btn-small {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-small {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-small:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* List View Specific Styles */
+.list-view .book-item {
+    flex-direction: row;
+    height: 200px;
+}
+
+.list-view .book-cover {
+    width: 130px;
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+.list-view .book-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
+    column-gap: 1rem;
+}
+
+.list-view .book-badges {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.list-view .book-price-container {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    margin-bottom: 0;
+}
+
+.list-view .book-title {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.list-view .book-author {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+}
+
+.list-view .book-rating {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+}
+
+.list-view .book-description {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.list-view .book-buttons {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+}
+
+/* Improved Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+}
+
+.page-link:hover:not(.disabled) {
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.page-link.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.page-link.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .books-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .list-view .book-item {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .list-view .book-cover {
+        width: 100%;
+        aspect-ratio: 2/3;
+    }
+    
+    .list-view .book-info {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-view {
+        grid-template-columns: 1fr;
+    }
+    
+    .book-buttons {
+        flex-direction: column;
+    }
+}

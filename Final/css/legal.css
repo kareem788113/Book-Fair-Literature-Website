@@ -1,0 +1,568 @@
+/* Legal Pages Styling */
+
+.legal-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.legal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.legal-content h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.legal-content h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #4a6fa5;
+}
+
+.last-updated {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.legal-intro {
+    background-color: #f5f9ff;
+    padding: 25px;
+    border-left: 4px solid #4a6fa5;
+    margin-bottom: 30px;
+    border-radius: 0 5px 5px 0;
+}
+
+.legal-intro p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.legal-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-toc {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.legal-toc h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.legal-toc ul {
+    list-style-type: none;
+    padding: 0;
+    columns: 2;
+}
+
+.legal-toc ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.legal-toc ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #4a6fa5;
+}
+
+.legal-toc ul li a {
+    color: #4a6fa5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-toc ul li a:hover {
+    color: #2c4268;
+    text-decoration: underline;
+}
+
+.legal-section-content {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.legal-section-content:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.legal-section-content h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.legal-section-content h2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #4a6fa5;
+}
+
+.legal-section-content h3 {
+    font-size: 20px;
+    color: #444;
+    margin: 25px 0 15px;
+}
+
+.legal-section-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.legal-section-content ul, 
+.legal-section-content ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.legal-section-content ul li, 
+.legal-section-content ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.legal-section-content a {
+    color: #4a6fa5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.legal-section-content a:hover {
+    color: #2c4268;
+    text-decoration: underline;
+}
+
+.legal-section-content address {
+    background-color: #f5f9ff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    line-height: 1.7;
+    color: #555;
+    font-style: normal;
+}
+
+/* Cookie consent banner */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.cookie-text h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.cookie-text p {
+    margin-bottom: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.accept-all {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+}
+
+.accept-all:hover {
+    background-color: #3a5a8c;
+}
+
+.customize {
+    background-color: transparent;
+    color: #4a6fa5;
+    border: 1px solid #4a6fa5;
+}
+
+.customize:hover {
+    background-color: #f0f5ff;
+}
+
+.reject-all {
+    background-color: #f0f0f0;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.reject-all:hover {
+    background-color: #e5e5e5;
+}
+
+/* Cookie settings modal */
+.cookie-settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    padding: 20px;
+}
+
+.cookie-settings-content {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cookie-settings-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.cookie-settings-header h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.cookie-settings-header p {
+    margin-bottom: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.cookie-type {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cookie-type:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cookie-type-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cookie-type-header h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.cookie-type-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.cookie-type-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cookie-type-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.cookie-type-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .cookie-type-slider {
+    background-color: #4a6fa5;
+}
+
+input:checked + .cookie-type-slider:before {
+    transform: translateX(24px);
+}
+
+.cookie-type-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.cookie-settings-footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 25px;
+    }
+    
+    .legal-content h1 {
+        font-size: 28px;
+    }
+    
+    .legal-toc ul {
+        columns: 1;
+    }
+    
+    .cookie-consent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cookie-text {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* Dark theme overrides */
+.theme-dark .legal-section {
+    background-color: #222;
+}
+
+.theme-dark .legal-content {
+    background-color: #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .legal-content h1,
+.theme-dark .legal-section-content h2,
+.theme-dark .legal-section-content h3,
+.theme-dark .legal-toc h2 {
+    color: #fff;
+}
+
+.theme-dark .last-updated {
+    color: #aaa;
+}
+
+.theme-dark .legal-intro,
+.theme-dark .legal-section-content address {
+    background-color: #2a3a4a;
+    border-color: #4a6fa5;
+}
+
+.theme-dark .legal-toc {
+    background-color: #2a2a2a;
+}
+
+.theme-dark .legal-section-content {
+    border-color: #444;
+}
+
+.theme-dark .legal-intro p,
+.theme-dark .legal-section-content p,
+.theme-dark .legal-section-content li {
+    color: #ccc;
+}
+
+.theme-dark .cookie-consent {
+    background-color: rgba(40, 40, 40, 0.95);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .cookie-text h3 {
+    color: #fff;
+}
+
+.theme-dark .cookie-text p {
+    color: #ccc;
+}
+
+.theme-dark .reject-all {
+    background-color: #444;
+    color: #ddd;
+    border-color: #555;
+}
+
+.theme-dark .reject-all:hover {
+    background-color: #555;
+}
+
+.theme-dark .cookie-settings-content {
+    background-color: #333;
+}
+
+.theme-dark .cookie-settings-header,
+.theme-dark .cookie-type,
+.theme-dark .cookie-settings-footer {
+    border-color: #444;
+}
+
+.theme-dark .cookie-settings-header h3,
+.theme-dark .cookie-type-header h4 {
+    color: #fff;
+}
+
+.theme-dark .cookie-settings-header p,
+.theme-dark .cookie-type-description {
+    color: #ccc;
+}
+
+/* Vintage theme overrides */
+.theme-vintage .legal-content h1:after,
+.theme-vintage .legal-section-content h2:before {
+    background-color: #8b5a2b;
+}
+
+.theme-vintage .legal-intro,
+.theme-vintage .legal-section-content address {
+    background-color: #f9f5e9;
+    border-color: #8b5a2b;
+}
+
+.theme-vintage .legal-toc ul li:before,
+.theme-vintage .legal-toc ul li a,
+.theme-vintage .legal-section-content a {
+    color: #8b5a2b;
+}
+
+.theme-vintage .legal-toc ul li a:hover,
+.theme-vintage .legal-section-content a:hover {
+    color: #6a4420;
+}
+
+.theme-vintage .accept-all,
+.theme-vintage input:checked + .cookie-type-slider {
+    background-color: #8b5a2b;
+}
+
+.theme-vintage .accept-all:hover {
+    background-color: #6a4420;
+}
+
+.theme-vintage .customize {
+    color: #8b5a2b;
+    border-color: #8b5a2b;
+}
+
+/* Modern theme overrides */
+.theme-modern .legal-content h1:after,
+.theme-modern .legal-section-content h2:before {
+    background-color: #ff6b6b;
+}
+
+.theme-modern .legal-intro,
+.theme-modern .legal-section-content address {
+    background-color: #f9f9f9;
+    border-color: #ff6b6b;
+}
+
+.theme-modern .legal-toc ul li:before,
+.theme-modern .legal-toc ul li a,
+.theme-modern .legal-section-content a {
+    color: #ff6b6b;
+}
+
+.theme-modern .legal-toc ul li a:hover,
+.theme-modern .legal-section-content a:hover {
+    color: #e05050;
+}
+
+.theme-modern .accept-all,
+.theme-modern input:checked + .cookie-type-slider {
+    background-color: #ff6b6b;
+}
+
+.theme-modern .accept-all:hover {
+    background-color: #e05050;
+}
+
+.theme-modern .customize {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}

@@ -1,0 +1,52 @@
+/* CSS to hide publisher images and view details buttons */
+
+/* Hide all publisher logo images */
+.publisher-logo-small,
+.publisher-logo {
+    display: none !important;
+}
+
+/* Hide all country flag images */
+.country-flag {
+    display: none !important;
+}
+
+/* Hide all view details buttons */
+.view-btn,
+.publisher-details-btn {
+    display: none !important;
+}
+
+/* Adjust publisher cell spacing without images */
+.publisher-cell {
+    padding-left: 10px !important;
+}
+
+/* Adjust publisher headquarters spacing without flags */
+.publisher-headquarters {
+    padding-left: 10px !important;
+}
+
+/* Style website links consistently */
+.website-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.website-link:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Hide any remaining view details elements */
+[data-publisher-id] {
+    display: none !important;
+}
+
+/* Hide modal elements */
+#publisher-modal {
+    display: none !important;
+}

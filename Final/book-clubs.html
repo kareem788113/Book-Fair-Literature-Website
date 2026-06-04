@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Clubs - Elite Readers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/blog-forum.css">
+    <link rel="stylesheet" href="css/social-media.css">
+    <link rel="stylesheet" href="css/book-clubs-complete.css">
+    <link rel="stylesheet" href="css/book-club-events.css">
+    <link rel="stylesheet" href="css/site-wide-enhancements.css">
+    <link rel="stylesheet" href="css/book-club-joined.css">
+    <link rel="stylesheet" href="css/book-club-clickable.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li><a href="books.html" class="nav-books">Books</a></li>
+                    <li><a href="authors.html" class="nav-authors">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="book-clubs.html" class="nav-book-clubs active">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="login.html" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="dashboard.html" id="profileBtn" style="display: none;"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Book Clubs Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Elite Readers Book Clubs</h1>
+            <p>Connect with fellow readers, discover new books, and engage in meaningful discussions</p>
+        </div>
+    </section>
+
+    <!-- How Book Clubs Work Section -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title">How Our Book Clubs Work</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Find Your Club</h3>
+                        <p>Browse our diverse range of book clubs based on your favorite genres, authors, or reading interests. Each club has its own unique focus and community.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Join & Connect</h3>
+                        <p>Sign up for a club that interests you and connect with fellow readers. Our clubs welcome readers of all levels and backgrounds.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Read Together</h3>
+                        <p>Each club selects books on a regular schedule. Members read at their own pace, following the club's reading timeline.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Discuss & Share</h3>
+                        <p>Participate in lively discussions either in-person or virtually. Share your thoughts, ask questions, and gain new perspectives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits of Book Clubs Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Join a Book Club?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Expand Your Horizons</h3>
+                    <p>Discover books you might never have chosen on your own and explore new genres, authors, and perspectives.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Deeper Understanding</h3>
+                    <p>Gain new insights through group discussions that reveal layers of meaning you might have missed on your own.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Build Community</h3>
+                    <p>Connect with like-minded readers and form meaningful friendships based on shared literary interests.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Reading Accountability</h3>
+                    <p>Stay motivated to read regularly and finish books with the gentle accountability of group expectations.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Find Your Voice</h3>
+                    <p>Practice articulating your thoughts and opinions in a supportive environment that values diverse perspectives.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Special Access</h3>
+                    <p>Enjoy exclusive events, author meet-and-greets, and special discounts on books selected for club reading.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Book Clubs Section -->
+    <section class="book-clubs-section">
+        <div class="container">
+            <h2 class="section-title">Our Active Book Clubs</h2>
+            <p class="section-description">Join one of our existing book clubs or start your own. Our book clubs meet regularly to discuss books, share insights, and build community around shared reading interests.</p>
+            
+            <div class="book-club-grid">
+                <!-- Book Club 1 -->
+                <div class="book-club-card" onclick="window.location.href='forum.html'" style="cursor: pointer;">
+                    <div class="book-club-image">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Contemporary Fiction Book Club">
+                        <div class="book-club-genre">Contemporary Fiction</div>
+                    </div>
+                    <div class="book-club-content">
+                        <h3>Contemporary Fiction Circle</h3>
+                        <div class="book-club-meta">
+                            <span><i class="fas fa-user-friends"></i> 28 members</span>
+                            <span><i class="fas fa-book"></i> Monthly read</span>
+                        </div>
+                        <p class="book-club-description">Explore today's most compelling fiction with our diverse and welcoming group. We focus on award-winning novels and emerging authors.</p>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-calendar-alt"></i> Meets every 2nd Saturday at 3:00 PM
+                        </div>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-book-open"></i> Current book: "The Midnight Library" by Matt Haig
+                        </div>
+                        <div class="book-club-footer">
+                            <div class="book-club-members">
+                                <i class="fas fa-users"></i> 5 spots available
+                            </div>
+                            <button class="join-button">Join Club</button>
+                        </div>
+                        <div class="joined-content" style="display: none;">
+                            <div class="joined-confirmation">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>You've joined this club!</h4>
+                                <p>Welcome to our community of book lovers.</p>
+                            </div>
+                            <div class="next-meeting-info">
+                                <h4>Next Meeting Details</h4>
+                                <p><i class="fas fa-calendar-alt"></i> Monday, May 26, 2025 at 6:30 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Main Library, Conference Room B</p>
+                                <p><i class="fas fa-book"></i> Please finish the book before the meeting</p>
+                            </div>
+                            <div class="club-resources">
+                                <h4>Club Resources</h4>
+                                <ul>
+                                    <li><a href="#">Discussion Guide</a></li>
+                                    <li><a href="#">Author Biography</a></li>
+                                    <li><a href="#">Reading Schedule</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book Club 2 -->
+                <div class="book-club-card" onclick="window.location.href='forum.html'" style="cursor: pointer;">
+                    <div class="book-club-image">
+                        <img src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Mystery & Thriller Book Club">
+                        <div class="book-club-genre">Mystery & Thriller</div>
+                    </div>
+                    <div class="book-club-content">
+                        <h3>Page-Turner Mysteries</h3>
+                        <div class="book-club-meta">
+                            <span><i class="fas fa-user-friends"></i> 32 members</span>
+                            <span><i class="fas fa-book"></i> Monthly read</span>
+                        </div>
+                        <p class="book-club-description">For fans of suspense, crime novels, and psychological thrillers. We dissect plots, discuss red herrings, and try to solve the mystery before the reveal.</p>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-calendar-alt"></i> Meets every 3rd Thursday at 7:00 PM
+                        </div>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-book-open"></i> Current book: "The Silent Patient" by Alex Michaelides
+                        </div>
+                        <div class="book-club-footer">
+                            <div class="book-club-members">
+                                <i class="fas fa-users"></i> 3 spots available
+                            </div>
+                            <button class="join-button">Join Club</button>
+                        </div>
+                        <div class="joined-content" style="display: none;">
+                            <div class="joined-confirmation">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>You've joined this club!</h4>
+                                <p>Welcome to our community of book lovers.</p>
+                            </div>
+                            <div class="next-meeting-info">
+                                <h4>Next Meeting Details</h4>
+                                <p><i class="fas fa-calendar-alt"></i> Thursday, May 29, 2025 at 7:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Online via Zoom (link will be emailed)</p>
+                                <p><i class="fas fa-book"></i> Please read chapters 1-5 before the meeting</p>
+                            </div>
+                            <div class="club-resources">
+                                <h4>Club Resources</h4>
+                                <ul>
+                                    <li><a href="#">Discussion Guide</a></li>
+                                    <li><a href="#">Author Biography</a></li>
+                                    <li><a href="#">Reading Schedule</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book Club 3 -->
+                <div class="book-club-card" onclick="window.location.href='forum.html'" style="cursor: pointer;">
+                    <div class="book-club-image">
+                        <img src="https://images.unsplash.com/photo-1531425300797-d5dc8b021c84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Science Fiction & Fantasy Book Club">
+                        <div class="book-club-genre">Science Fiction & Fantasy</div>
+                    </div>
+                    <div class="book-club-content">
+                        <h3>Worlds Beyond</h3>
+                        <div class="book-club-meta">
+                            <span><i class="fas fa-user-friends"></i> 45 members</span>
+                            <span><i class="fas fa-book"></i> Monthly read</span>
+                        </div>
+                        <p class="book-club-description">Journey through imaginative worlds, futuristic technologies, and magical realms. Our discussions explore world-building, character development, and speculative themes.</p>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-calendar-alt"></i> Meets every 1st Sunday at 4:00 PM
+                        </div>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-book-open"></i> Current book: "Project Hail Mary" by Andy Weir
+                        </div>
+                        <div class="book-club-footer">
+                            <div class="book-club-members">
+                                <i class="fas fa-users"></i> Open membership
+                            </div>
+                            <button class="join-button">Join Club</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book Club 4 -->
+                <div class="book-club-card">
+                    <div class="book-club-image">
+                        <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Non-Fiction Book Club">
+                        <div class="book-club-genre">Non-Fiction</div>
+                    </div>
+                    <div class="book-club-content">
+                        <h3>Reality Readers</h3>
+                        <div class="book-club-meta">
+                            <span><i class="fas fa-user-friends"></i> 24 members</span>
+                            <span><i class="fas fa-book"></i> Monthly read</span>
+                        </div>
+                        <p class="book-club-description">Dive into memoirs, biographies, history, science, and philosophy. We explore real-world topics and engage in thoughtful, informed discussions.</p>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-calendar-alt"></i> Meets every 4th Wednesday at 6:30 PM
+                        </div>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-book-open"></i> Current book: "Sapiens" by Yuval Noah Harari
+                        </div>
+                        <div class="book-club-footer">
+                            <div class="book-club-members">
+                                <i class="fas fa-users"></i> 7 spots available
+                            </div>
+                            <button class="join-button">Join Club</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book Club 5 -->
+                <div class="book-club-card">
+                    <div class="book-club-image">
+                        <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Classic Literature Book Club">
+                        <div class="book-club-genre">Classics</div>
+                    </div>
+                    <div class="book-club-content">
+                        <h3>Timeless Tales</h3>
+                        <div class="book-club-meta">
+                            <span><i class="fas fa-user-friends"></i> 19 members</span>
+                            <span><i class="fas fa-book"></i> Monthly read</span>
+                        </div>
+                        <p class="book-club-description">Rediscover literary masterpieces and explore their enduring relevance. We analyze themes, historical context, and literary techniques in classic works.</p>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-calendar-alt"></i> Meets every 2nd Tuesday at 5:00 PM
+                        </div>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-book-open"></i> Current book: "Jane Eyre" by Charlotte Brontë
+                        </div>
+                        <div class="book-club-footer">
+                            <div class="book-club-members">
+                                <i class="fas fa-users"></i> 6 spots available
+                            </div>
+                            <button class="join-button">Join Club</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book Club 6 -->
+                <div class="book-club-card">
+                    <div class="book-club-image">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Young Adult Book Club">
+                        <div class="book-club-genre">Young Adult</div>
+                    </div>
+                    <div class="book-club-content">
+                        <h3>Next Chapter</h3>
+                        <div class="book-club-meta">
+                            <span><i class="fas fa-user-friends"></i> 37 members</span>
+                            <span><i class="fas fa-book"></i> Monthly read</span>
+                        </div>
+                        <p class="book-club-description">Explore the best of young adult fiction across all genres. Our vibrant community welcomes readers of all ages who enjoy YA literature.</p>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-calendar-alt"></i> Meets every 3rd Saturday at 2:00 PM
+                        </div>
+                        <div class="book-club-meeting">
+                            <i class="fas fa-book-open"></i> Current book: "Six of Crows" by Leigh Bardugo
+                        </div>
+                        <div class="book-club-footer">
+                            <div class="book-club-members">
+                                <i class="fas fa-users"></i> Open membership
+                            </div>
+                            <button class="join-button">Join Club</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Book Clubs Section -->
+    <section class="virtual-clubs-section">
+        <div class="container">
+            <h2 class="section-title">Virtual Book Clubs</h2>
+            <p class="section-description">Can't make it to in-person meetings? Join one of our virtual book clubs that meet online through video calls and discussion forums.</p>
+            
+            <div class="virtual-clubs-container">
+                <div class="virtual-club">
+                    <div class="virtual-club-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="virtual-club-content">
+                        <h3>Global Readers</h3>
+                        <p>A diverse international community reading books from around the world. Members from 15+ countries share cultural perspectives.</p>
+                        <div class="virtual-club-details">
+                            <span><i class="fas fa-video"></i> Zoom meetings twice monthly</span>
+                            <span><i class="fas fa-book"></i> Current read: "Pachinko" by Min Jin Lee</span>
+                        </div>
+                        <button class="join-button">Join Virtual Club</button>
+                    </div>
+                </div>
+                
+                <div class="virtual-club">
+                    <div class="virtual-club-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="virtual-club-content">
+                        <h3>Flexible Readers</h3>
+                        <p>For busy readers who need flexibility. Asynchronous discussions through our forum, with optional monthly video meetups.</p>
+                        <div class="virtual-club-details">
+                            <span><i class="fas fa-comments"></i> Ongoing forum discussions</span>
+                            <span><i class="fas fa-book"></i> Current read: "Cloud Cuckoo Land" by Anthony Doerr</span>
+                        </div>
+                        <button class="join-button">Join Virtual Club</button>
+                    </div>
+                </div>
+                
+                <div class="virtual-club">
+                    <div class="virtual-club-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="virtual-club-content">
+                        <h3>Audiobook Adventurers</h3>
+                        <p>Dedicated to the listening experience. We discuss narration, audio production, and how listening differs from reading.</p>
+                        <div class="virtual-club-details">
+                            <span><i class="fas fa-podcast"></i> Weekly audio discussions</span>
+                            <span><i class="fas fa-book"></i> Current listen: "Project Hail Mary" narrated by Ray Porter</span>
+                        </div>
+                        <button class="join-button">Join Virtual Club</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Start Your Own Club Section -->
+    <section class="start-club-section">
+        <div class="container">
+            <div class="start-club-container">
+                <div class="start-club-content">
+                    <h2>Start Your Own Book Club</h2>
+                    <p>Have a unique reading interest not covered by our existing clubs? Create your own book club and build a community of readers who share your passion.</p>
+                    
+                    <div class="club-benefits">
+                        <div class="club-benefit">
+                            <i class="fas fa-tools"></i>
+                            <h4>We Provide the Tools</h4>
+                            <p>Access to meeting spaces, virtual platforms, discussion guides, and promotional support.</p>
+                        </div>
+                        <div class="club-benefit">
+                            <i class="fas fa-percentage"></i>
+                            <h4>Member Discounts</h4>
+                            <p>Your club members receive special discounts on selected books and priority access to author events.</p>
+                        </div>
+                        <div class="club-benefit">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Ongoing Support</h4>
+                            <p>Guidance on facilitating discussions, curating reading lists, and growing your membership.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="start-club-form">
+                    <h3>Apply to Start a Club</h3>
+                    <form id="new-club-form">
+                        <div class="form-group">
+                            <label for="club-name">Club Name</label>
+                            <input type="text" id="club-name" name="club-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="club-genre">Primary Genre/Focus</label>
+                            <select id="club-genre" name="club-genre" required>
+                                <option value="">Select a genre</option>
+                                <option value="fiction">General Fiction</option>
+                                <option value="mystery">Mystery & Thriller</option>
+                                <option value="scifi">Science Fiction & Fantasy</option>
+                                <option value="historical">Historical Fiction</option>
+                                <option value="romance">Romance</option>
+                                <option value="nonfiction">Non-Fiction</option>
+                                <option value="biography">Biography & Memoir</option>
+                                <option value="classics">Classics</option>
+                                <option value="ya">Young Adult</option>
+                                <option value="other">Other (specify below)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="club-description">Club Description</label>
+                            <textarea id="club-description" name="club-description" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="meeting-frequency">Preferred Meeting Frequency</label>
+                            <select id="meeting-frequency" name="meeting-frequency" required>
+                                <option value="">Select frequency</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="biweekly">Bi-weekly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="bimonthly">Bi-monthly</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="meeting-type">Meeting Type</label>
+                            <select id="meeting-type" name="meeting-type" required>
+                                <option value="">Select type</option>
+                                <option value="in-person">In-person</option>
+                                <option value="virtual">Virtual</option>
+                                <option value="hybrid">Hybrid (Both)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="additional-info">Additional Information</label>
+                            <textarea id="additional-info" name="additional-info" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Upcoming Book Club Events Section -->
+    <section class="upcoming-events-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Book Club Events</h2>
+            <p class="section-description">Join us for these special book club events and activities. Open to members and non-members alike!</p>
+            
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">JUN</span>
+                        <span class="event-day">15</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Author Q&A: Margaret Atwood</h3>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 7:00 PM - 9:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Virtual Event (Zoom)</span>
+                        </div>
+                        <p class="event-description">Join us for an exclusive Q&A session with acclaimed author Margaret Atwood. She'll discuss her latest novel and answer questions from book club members.</p>
+                        <div class="event-footer">
+                            <span class="event-club">Hosted by: Contemporary Fiction Circle</span>
+                            <a href="#" class="register-button">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">JUN</span>
+                        <span class="event-day">22</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Book Discussion: "Project Hail Mary"</h3>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 6:30 PM - 8:30 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Main Library, Conference Room B</span>
+                        </div>
+                        <p class="event-description">An in-depth discussion of Andy Weir's latest sci-fi thriller. Open to all sci-fi enthusiasts, whether you've read the book or just curious about it.</p>
+                        <div class="event-footer">
+                            <span class="event-club">Hosted by: Cosmic Explorers Book Club</span>
+                            <a href="#" class="register-button">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">JUL</span>
+                        <span class="event-day">08</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Book Club Social Mixer</h3>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 5:00 PM - 7:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Riverside Café</span>
+                        </div>
+                        <p class="event-description">Meet members from all our book clubs in this casual social gathering. Share recommendations, make new friends, and enjoy light refreshments.</p>
+                        <div class="event-footer">
+                            <span class="event-club">Hosted by: Elite Readers Team</span>
+                            <a href="#" class="register-button">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 4 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-month">JUL</span>
+                        <span class="event-day">20</span>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Workshop: How to Lead a Book Discussion</h3>
+                        <div class="event-details">
+                            <span><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Community Center, Room 204</span>
+                        </div>
+                        <p class="event-description">Learn effective techniques for leading engaging book discussions. Perfect for current or aspiring book club leaders.</p>
+                        <div class="event-footer">
+                            <span class="event-club">Hosted by: Dr. Emily Chen, Literature Professor</span>
+                            <a href="#" class="register-button">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-container">
+                <a href="events.html" class="view-all-button">View All Events <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Members Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Joining the Contemporary Fiction Circle completely transformed my reading experience. I've discovered so many amazing books I would have never picked up on my own, and the discussions have deepened my appreciation for literature."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J.">
+                        <div class="author-info">
+                            <h4>Sarah J.</h4>
+                            <p>Member since 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As someone who works irregular hours, the Flexible Readers virtual club has been perfect for me. I can participate in discussions whenever I have time, and I've connected with readers from all over the world."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+                        <div class="author-info">
+                            <h4>Michael T.</h4>
+                            <p>Member since 2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Starting my own science fiction book club was surprisingly easy with Elite Readers' support. They provided everything we needed to get started, and now we have a thriving community of 30+ members!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elena R.">
+                        <div class="author-info">
+                            <h4>Elena R.</h4>
+                            <p>Club founder, 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How Book Clubs Work</h2>
+            <p class="section-description">Joining a book club is easy and rewarding. Here's how to get started:</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose a Club</h3>
+                    <p>Browse our book clubs and find one that matches your reading interests and schedule.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Join & Get the Book</h3>
+                    <p>Click "Join Club" and get access to the club's page. Acquire the current book through your preferred method.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Read & Prepare</h3>
+                    <p>Read the book at your own pace and prepare any thoughts or questions for discussion.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Attend & Discuss</h3>
+                    <p>Participate in meetings either in-person or virtually and engage in thoughtful discussions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Your Own Club Banner -->
+    <section class="start-club-banner">
+        <div class="container">
+            <h2>Start Your Own Book Club</h2>
+            <p>Have a specific genre or author you're passionate about? Create your own book club and build a community of like-minded readers.</p>
+            <a href="start-club.html" class="btn btn-primary btn-large">Create a Book Club</a>
+        </div>
+    </section>
+
+    <!-- Featured Book Clubs -->
+    <section class="featured-book-clubs">
+        <div class="container">
+            <h2 class="section-title">Featured Book Club of the Month</h2>
+            
+            <div class="featured-club-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1529148482759-b35b25c5f217?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Featured Book Club" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>International Literature Explorers</h3>
+                        <p class="lead">Discover literary gems from around the world with our diverse and passionate community of global readers.</p>
+                        <p>This month's featured club takes readers on a journey across continents through translated works and international authors. Founded in 2023, this club has grown to over 50 members who share a passion for diverse perspectives and cultural insights through literature.</p>
+                        <p><strong>Current read:</strong> "Convenience Store Woman" by Sayaka Murata</p>
+                        <p><strong>Meeting schedule:</strong> Every 2nd Friday at 7:00 PM</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Discover the world of literature at our annual Book Fair & Literature Festival. Explore thousands of books, meet your favorite authors, and join literary events.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="publishers.html">Publishers</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="book-clubs.html">Book Clubs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Reading City, RC 12345</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@elitereaders.com</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Stay updated with our latest books and events</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elite Readers - Book Fair & Literature. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/header-icons.js"></script>
+    <script>
+        // Book Club Join Button Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const joinButtons = document.querySelectorAll('.join-button');
+            
+            joinButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    // Prevent the click from bubbling up to the card
+                    event.stopPropagation();
+                    
+                    // Get the book club card and name
+                    const bookClubCard = this.closest('.book-club-card');
+                    const clubName = bookClubCard.querySelector('h3').textContent;
+                    
+                    // Show joined confirmation
+                    this.textContent = 'Joined';
+                    this.disabled = true;
+                    this.classList.add('joined');
+                    
+                    // Show the joined content
+                    const joinedContent = bookClubCard.querySelector('.joined-content');
+                    if (joinedContent) {
+                        joinedContent.style.display = 'block';
+                        
+                        // Smooth scroll to show the joined content
+                        setTimeout(() => {
+                            joinedContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 300);
+                    }
+                    
+                    // Store joined status in localStorage
+                    const joinedClubs = JSON.parse(localStorage.getItem('joinedBookClubs') || '[]');
+                    if (!joinedClubs.includes(clubName)) {
+                        joinedClubs.push(clubName);
+                        localStorage.setItem('joinedBookClubs', JSON.stringify(joinedClubs));
+                    }
+                });
+            });
+            
+            // Check if user has previously joined any clubs
+            const joinedClubs = JSON.parse(localStorage.getItem('joinedBookClubs') || '[]');
+            if (joinedClubs.length > 0) {
+                const bookClubCards = document.querySelectorAll('.book-club-card');
+                
+                bookClubCards.forEach(card => {
+                    const clubName = card.querySelector('h3').textContent;
+                    if (joinedClubs.includes(clubName)) {
+                        const joinButton = card.querySelector('.join-button');
+                        const joinedContent = card.querySelector('.joined-content');
+                        
+                        if (joinButton) {
+                            joinButton.textContent = 'Joined';
+                            joinButton.disabled = true;
+                            joinButton.classList.add('joined');
+                        }
+                        
+                        if (joinedContent) {
+                            joinedContent.style.display = 'block';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <!-- Floating Social Media Bar -->
+    <div class="social-media-floating">
+        <a href="https://facebook.com/elitereaders" class="facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+        <a href="https://twitter.com/elitereaders" class="twitter" target="_blank">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+        </a>
+        <a href="https://instagram.com/elitereaders" class="instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+        <a href="https://linkedin.com/company/elitereaders" class="linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://youtube.com/elitereaders" class="youtube" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,413 @@
+/**
+ * Book Club Events Styles
+ * Styling for the upcoming book club events section
+ */
+
+/* Upcoming Events Section */
+.upcoming-events-section {
+    padding: 80px 0;
+    background-color: #f9f7f4;
+}
+
+.theme-dark .upcoming-events-section {
+    background-color: #2a2a2a;
+}
+
+.theme-vintage .upcoming-events-section {
+    background-color: #f5f1e8;
+}
+
+.theme-modern .upcoming-events-section {
+    background-color: #f8f9fa;
+}
+
+.upcoming-events-section .section-title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.theme-dark .upcoming-events-section .section-title {
+    color: #e0e0e0;
+}
+
+.theme-vintage .upcoming-events-section .section-title {
+    color: #8b6b4c;
+}
+
+.theme-modern .upcoming-events-section .section-title {
+    color: #6c63ff;
+}
+
+.upcoming-events-section .section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.theme-dark .upcoming-events-section .section-description {
+    color: #b0b0b0;
+}
+
+.theme-vintage .upcoming-events-section .section-description {
+    color: #6d5d4b;
+}
+
+.theme-modern .upcoming-events-section .section-description {
+    color: #555;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Event Card */
+.event-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.theme-dark .event-card {
+    background-color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-vintage .event-card {
+    background-color: #fff9f0;
+    box-shadow: 0 5px 15px rgba(139, 107, 76, 0.1);
+    border: 1px solid #e8d9c5;
+}
+
+.theme-modern .event-card {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Event Date */
+.event-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    min-width: 80px;
+    background-color: #4a6fa5;
+    color: #fff;
+    text-align: center;
+}
+
+.theme-dark .event-date {
+    background-color: #1e3a5f;
+}
+
+.theme-vintage .event-date {
+    background-color: #8b6b4c;
+}
+
+.theme-modern .event-date {
+    background-color: #6c63ff;
+    border-radius: 16px 0 0 16px;
+}
+
+.event-month {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.event-day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Event Content */
+.event-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.event-title {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.theme-dark .event-title {
+    color: #e0e0e0;
+}
+
+.theme-vintage .event-title {
+    color: #8b6b4c;
+}
+
+.theme-modern .event-title {
+    color: #333;
+}
+
+.event-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.theme-dark .event-details {
+    color: #b0b0b0;
+}
+
+.theme-vintage .event-details {
+    color: #6d5d4b;
+}
+
+.theme-modern .event-details {
+    color: #555;
+}
+
+.event-details span {
+    display: flex;
+    align-items: center;
+}
+
+.event-details i {
+    margin-right: 5px;
+    color: #4a6fa5;
+}
+
+.theme-dark .event-details i {
+    color: #6d9eeb;
+}
+
+.theme-vintage .event-details i {
+    color: #8b6b4c;
+}
+
+.theme-modern .event-details i {
+    color: #6c63ff;
+}
+
+.event-description {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.theme-dark .event-description {
+    color: #ccc;
+}
+
+.theme-vintage .event-description {
+    color: #5d4d3d;
+}
+
+.theme-modern .event-description {
+    color: #444;
+}
+
+.event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.theme-dark .event-footer {
+    border-top-color: #444;
+}
+
+.theme-vintage .event-footer {
+    border-top-color: #e8d9c5;
+}
+
+.theme-modern .event-footer {
+    border-top-color: #f0f0f0;
+}
+
+.event-club {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #777;
+}
+
+.theme-dark .event-club {
+    color: #999;
+}
+
+.theme-vintage .event-club {
+    color: #8b6b4c;
+}
+
+.theme-modern .event-club {
+    color: #666;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4a6fa5;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #3a5a8c;
+}
+
+.theme-dark .register-button {
+    background-color: #1e3a5f;
+}
+
+.theme-dark .register-button:hover {
+    background-color: #2a4a7f;
+}
+
+.theme-vintage .register-button {
+    background-color: #8b6b4c;
+}
+
+.theme-vintage .register-button:hover {
+    background-color: #7a5c3d;
+}
+
+.theme-modern .register-button {
+    background-color: #6c63ff;
+    border-radius: 30px;
+}
+
+.theme-modern .register-button:hover {
+    background-color: #5a52e0;
+}
+
+/* View All Button */
+.view-all-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-all-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #4a6fa5;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #4a6fa5;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.view-all-button i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.view-all-button:hover {
+    background-color: #4a6fa5;
+    color: #fff;
+}
+
+.view-all-button:hover i {
+    transform: translateX(5px);
+}
+
+.theme-dark .view-all-button {
+    color: #6d9eeb;
+    border-color: #6d9eeb;
+}
+
+.theme-dark .view-all-button:hover {
+    background-color: #6d9eeb;
+    color: #222;
+}
+
+.theme-vintage .view-all-button {
+    color: #8b6b4c;
+    border-color: #8b6b4c;
+}
+
+.theme-vintage .view-all-button:hover {
+    background-color: #8b6b4c;
+    color: #fff9f0;
+}
+
+.theme-modern .view-all-button {
+    color: #6c63ff;
+    border-color: #6c63ff;
+    border-radius: 30px;
+}
+
+.theme-modern .view-all-button:hover {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        flex-direction: row;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .event-month {
+        margin-right: 5px;
+    }
+    
+    .theme-modern .event-date {
+        border-radius: 16px 16px 0 0;
+    }
+    
+    .event-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .upcoming-events-section {
+        padding: 60px 0;
+    }
+    
+    .upcoming-events-section .section-title {
+        font-size: 2rem;
+    }
+}

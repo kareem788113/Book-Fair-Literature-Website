@@ -1,0 +1,307 @@
+/**
+ * Book Layout Fix CSS for LitFest - Book Fair & Literature Website
+ * Ensures books are arranged properly next to each other
+ */
+
+/* Fix for book items layout */
+.book-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin: 0;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure consistent book cover size */
+.book-cover {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.book-item:hover .book-cover img {
+    transform: scale(1.05);
+}
+
+/* Consistent book info layout */
+.book-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    min-height: 220px;
+}
+
+.book-title {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+    color: var(--heading-color);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.6rem;
+    position: relative;
+    z-index: 2;
+    background-color: var(--bg-color);
+}
+
+.book-author {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0 0 10px 0;
+    position: relative;
+    z-index: 2;
+    background-color: var(--bg-color);
+}
+
+/* Grid view specific layout */
+.search-results.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.search-results.grid-view .book-item {
+    flex-direction: column;
+}
+
+.search-results.grid-view .book-cover {
+    width: 100%;
+    height: 250px;
+}
+
+/* List view specific layout */
+.search-results.list-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.search-results.list-view .book-item {
+    flex-direction: row;
+    height: auto;
+}
+
+.search-results.list-view .book-cover {
+    width: 120px;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+/* Fix for book rating and price layout */
+.book-rating {
+    margin: 5px 0 10px 0;
+    font-size: 0.85rem;
+    color: #f39c12;
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.book-rating i {
+    margin-right: 2px;
+}
+
+.rating-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: 5px;
+}
+
+.reviews-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: 5px;
+}
+
+.book-description {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+    clear: both;
+    max-height: 4.5em;
+}
+
+.book-price-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    clear: both;
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced price display */
+.book-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.2rem;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color is not standard, using color: transparent as fallback */
+    color: transparent;
+    display: inline-block;
+    padding: 2px 0;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.book-original-price {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+.discount-badge {
+    background-color: var(--success-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.book-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Book actions and quick view button styling */
+.book-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.book-item:hover .book-actions {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bookmark-btn,
+.quick-view-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bookmark-btn:hover,
+.quick-view-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.bookmark-btn.bookmarked {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Back to books link */
+.back-to-books-link {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+    padding: 5px 10px;
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-to-books-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.back-to-books-link i {
+    margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .search-results.grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .search-results.grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 15px;
+    }
+    
+    .book-cover {
+        height: 200px;
+    }
+    
+    .book-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-results.grid-view {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .book-cover {
+        height: 180px;
+    }
+    
+    .book-info {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,116 @@
+/**
+ * Book Categories CSS for LitFest - Book Fair & Literature Website
+ */
+
+/* Categories Section */
+.categories-section {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.categories-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+    font-size: 1.2rem;
+}
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--bg-color);
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    margin-bottom: 8px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.category-item:hover {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+}
+
+.category-item.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.category-item i {
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+.category-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 0.7rem;
+    margin-left: 8px;
+    padding: 0 6px;
+}
+
+.category-item.active .category-count {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Books Container Layout */
+.books-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.books-content {
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .books-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-section {
+        order: -1;
+    }
+    
+    .categories-list {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-item {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}

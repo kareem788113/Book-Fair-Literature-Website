@@ -1,0 +1,595 @@
+/* Enhanced Navigation Bar Styles
+ * Provides a modern, user-friendly navigation experience for the LitFest website
+ */
+
+/* Main Header Enhancement */
+header {
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-dark header {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.theme-vintage header {
+    background-color: #f8f5e6;
+    box-shadow: 0 2px 8px rgba(139, 107, 76, 0.15);
+}
+
+.theme-modern header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 15px rgba(108, 99, 255, 0.1);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Enhancement */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navigation Menu Enhancement */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 5px;
+    position: relative;
+}
+
+nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #4a6fa5;
+    background-color: rgba(74, 111, 165, 0.05);
+}
+
+nav a.active {
+    color: #4a6fa5;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 3px;
+    background-color: #4a6fa5;
+    border-radius: 3px;
+}
+
+/* Theme-specific navigation styles */
+.theme-dark nav a {
+    color: #ccc;
+}
+
+.theme-dark nav a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark nav a.active {
+    color: #fff;
+}
+
+.theme-dark nav a.active::after {
+    background-color: #fff;
+}
+
+.theme-vintage nav a {
+    color: #6d543c;
+}
+
+.theme-vintage nav a:hover {
+    color: #8b6b4c;
+    background-color: rgba(139, 107, 76, 0.05);
+}
+
+.theme-vintage nav a.active {
+    color: #8b6b4c;
+}
+
+.theme-vintage nav a.active::after {
+    background-color: #8b6b4c;
+}
+
+.theme-modern nav a {
+    color: #555;
+}
+
+.theme-modern nav a:hover {
+    color: #6c63ff;
+    background-color: rgba(108, 99, 255, 0.05);
+}
+
+.theme-modern nav a.active {
+    color: #6c63ff;
+}
+
+.theme-modern nav a.active::after {
+    background-color: #6c63ff;
+}
+
+/* Header Actions Enhancement */
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.icon-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.icon-btn:hover {
+    background-color: rgba(74, 111, 165, 0.1);
+    color: #4a6fa5;
+    transform: translateY(-2px);
+}
+
+.icon-btn.active {
+    color: #4a6fa5;
+    background-color: rgba(74, 111, 165, 0.1);
+}
+
+.icon-btn i {
+    font-size: 1.2rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-btn:hover .cart-count {
+    transform: scale(1.1);
+}
+
+/* Theme-specific icon button styles */
+.theme-dark .icon-btn {
+    color: #ccc;
+}
+
+.theme-dark .icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.theme-dark .icon-btn.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-vintage .icon-btn {
+    color: #6d543c;
+}
+
+.theme-vintage .icon-btn:hover {
+    background-color: rgba(139, 107, 76, 0.1);
+    color: #8b6b4c;
+}
+
+.theme-vintage .icon-btn.active {
+    color: #8b6b4c;
+    background-color: rgba(139, 107, 76, 0.1);
+}
+
+.theme-modern .icon-btn {
+    color: #555;
+}
+
+.theme-modern .icon-btn:hover {
+    background-color: rgba(108, 99, 255, 0.1);
+    color: #6c63ff;
+}
+
+.theme-modern .icon-btn.active {
+    color: #6c63ff;
+    background-color: rgba(108, 99, 255, 0.1);
+}
+
+/* Login/Register Buttons Enhancement */
+.btn-small {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-left: 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #555;
+    background-color: transparent;
+    border: 1px solid #ddd;
+}
+
+.btn-small:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.btn-small.btn-primary {
+    background-color: #4a6fa5;
+    color: white;
+    border: 1px solid #4a6fa5;
+}
+
+.btn-small.btn-primary:hover {
+    background-color: #3d5d8a;
+    border-color: #3d5d8a;
+}
+
+/* Theme-specific button styles */
+.theme-dark .btn-small {
+    color: #ccc;
+    border-color: #444;
+}
+
+.theme-dark .btn-small:hover {
+    background-color: #2a2a2a;
+}
+
+.theme-dark .btn-small.btn-primary {
+    background-color: #4a6fa5;
+    color: white;
+    border-color: #4a6fa5;
+}
+
+.theme-dark .btn-small.btn-primary:hover {
+    background-color: #3d5d8a;
+    border-color: #3d5d8a;
+}
+
+.theme-vintage .btn-small {
+    color: #6d543c;
+    border-color: #d5c7b5;
+}
+
+.theme-vintage .btn-small:hover {
+    background-color: #f8f5e6;
+}
+
+.theme-vintage .btn-small.btn-primary {
+    background-color: #8b6b4c;
+    color: white;
+    border-color: #8b6b4c;
+}
+
+.theme-vintage .btn-small.btn-primary:hover {
+    background-color: #6d543c;
+    border-color: #6d543c;
+}
+
+.theme-modern .btn-small {
+    color: #555;
+    border-color: #eee;
+    border-radius: 30px;
+}
+
+.theme-modern .btn-small:hover {
+    background-color: #f9f9f9;
+}
+
+.theme-modern .btn-small.btn-primary {
+    background-color: #6c63ff;
+    color: white;
+    border-color: #6c63ff;
+}
+
+.theme-modern .btn-small.btn-primary:hover {
+    background-color: #5a52e0;
+    border-color: #5a52e0;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 992px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1001;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    nav a {
+        padding: 12px 15px;
+    }
+    
+    nav a.active::after {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        margin-left: 15px;
+    }
+    
+    .mobile-menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: #555;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .theme-dark nav {
+        background-color: #1a1a1a;
+    }
+    
+    .theme-vintage nav {
+        background-color: #f8f5e6;
+    }
+}
+
+/* Dropdown Menu Enhancement */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    display: block;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(74, 111, 165, 0.05);
+    color: #4a6fa5;
+}
+
+/* Theme-specific dropdown styles */
+.theme-dark .dropdown-menu {
+    background-color: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark .dropdown-menu a {
+    color: #ccc;
+}
+
+.theme-dark .dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.theme-vintage .dropdown-menu {
+    background-color: #f8f5e6;
+    box-shadow: 0 5px 15px rgba(139, 107, 76, 0.15);
+}
+
+.theme-vintage .dropdown-menu a {
+    color: #6d543c;
+}
+
+.theme-vintage .dropdown-menu a:hover {
+    background-color: rgba(139, 107, 76, 0.05);
+    color: #8b6b4c;
+}
+
+.theme-modern .dropdown-menu {
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.1);
+    border-radius: 8px;
+}
+
+.theme-modern .dropdown-menu a {
+    color: #555;
+}
+
+.theme-modern .dropdown-menu a:hover {
+    background-color: rgba(108, 99, 255, 0.05);
+    color: #6c63ff;
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #4a6fa5;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Scroll Behavior */
+header.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for Navigation Elements */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo a, nav ul, .header-actions {
+    animation: fadeInDown 0.5s ease-out;
+}
+
+/* User Profile Link */
+.user-profile-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.user-profile-link i {
+    margin-right: 6px;
+    font-size: 1.1rem;
+}
+
+.user-profile-link:hover {
+    background-color: rgba(74, 111, 165, 0.1);
+    color: #4a6fa5;
+    transform: translateY(-2px);
+}
+
+/* Theme-specific user profile link styles */
+.theme-dark .user-profile-link {
+    color: #ccc;
+}
+
+.theme-dark .user-profile-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.theme-vintage .user-profile-link {
+    color: #6d543c;
+}
+
+.theme-vintage .user-profile-link:hover {
+    background-color: rgba(139, 107, 76, 0.1);
+    color: #8b6b4c;
+}
+
+.theme-modern .user-profile-link {
+    color: #555;
+}
+
+.theme-modern .user-profile-link:hover {
+    background-color: rgba(108, 99, 255, 0.1);
+    color: #6c63ff;
+}

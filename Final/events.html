@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Elite Readers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/events-enhanced.css">
+    <link rel="stylesheet" href="css/social-media.css">
+</head>
+<body class="theme-default">
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-palette"></i></button>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="default">Default</button>
+            <button class="theme-option" data-theme="dark">Dark</button>
+            <button class="theme-option" data-theme="vintage">Vintage</button>
+            <button class="theme-option" data-theme="modern">Modern</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fas fa-book-open"></i> Elite Readers</h1>
+                </a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-home">Home</a></li>
+                    <li><a href="books.html" class="nav-books">Books</a></li>
+                    <li><a href="authors.html" class="nav-authors">Authors</a></li>
+                    <li><a href="publishers.html" class="nav-publishers">Publishers</a></li>
+                    <li><a href="forum.html" class="nav-book-clubs">Book Clubs</a></li>
+                    <li><a href="events.html" class="nav-events active">Events</a></li>
+                    <li><a href="blog.html" class="nav-blog">Blog</a></li>
+                    <li><a href="forum.html" class="nav-forum">Forum</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact</a></li>
+                    <li class="user-actions">
+                        <a href="login.html" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        <a href="dashboard.html" id="profileBtn" style="display: none;"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Literary Events & Activities</h1>
+            <p>Discover book launches, author meet & greets, workshops, and literary festivals happening around the world.</p>
+
+        </div>
+    </section>
+
+
+
+    <!-- Featured Events -->
+    <section class="featured-events">
+        <div class="container">
+            <h2 class="section-title">Featured Events</h2>
+            <div class="featured-events-slider">
+                <!-- Featured Event 1 -->
+                <div class="featured-event">
+                    <div class="featured-event-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="International Book Fair 2025">
+                        <div class="event-badge">Featured</div>
+                    </div>
+                    <div class="featured-event-content">
+                        <div class="event-date">
+                            <span class="day">10-15</span>
+                            <span class="month">Jul</span>
+                        </div>
+                        <h3>International Book Fair 2025</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Frankfurt Exhibition Center, Germany</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 9:00 AM - 8:00 PM Daily</p>
+                        <p class="event-description">The world's largest trade fair for books featuring over 7,500 exhibitors from 100 countries, 300,000 visitors, and 4,000 events. This year's theme is "Literature Without Borders" with a special focus on translated works and international collaboration.</p>
+                        <div class="event-highlights">
+                            <h4>Event Highlights:</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> Opening ceremony with Nobel Prize winner Kazuo Ishiguro</li>
+                                <li><i class="fas fa-star"></i> Panel discussions with international bestselling authors</li>
+                                <li><i class="fas fa-star"></i> Publishing industry workshops and networking opportunities</li>
+                                <li><i class="fas fa-star"></i> Rights and licensing marketplace for publishers</li>
+                                <li><i class="fas fa-star"></i> Digital innovation showcase for the future of reading</li>
+                            </ul>
+                        </div>
+                        <div class="event-speakers">
+                            <h4>Featured Speakers:</h4>
+                            <div class="speaker-avatars">
+                                <div class="speaker-avatar" title="Margaret Atwood">
+                                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Margaret Atwood">
+                                </div>
+                                <div class="speaker-avatar" title="Haruki Murakami">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Haruki Murakami">
+                                </div>
+                                <div class="speaker-avatar" title="Chimamanda Ngozi Adichie">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chimamanda Ngozi Adichie">
+                                </div>
+                                <div class="speaker-avatar" title="Salman Rushdie">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Salman Rushdie">
+                                </div>
+                                <div class="speaker-avatar" title="More Speakers">
+                                    <span>+20</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=5" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="5"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Event 2 -->
+                <div class="featured-event">
+                    <div class="featured-event-image">
+                        <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Literary Festival 2025">
+                        <div class="event-badge">Featured</div>
+                    </div>
+                    <div class="featured-event-content">
+                        <div class="event-date">
+                            <span class="day">20-25</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <h3>Elite Readers Literary Festival 2025</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Central Park, New York</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 10:00 AM - 9:00 PM Daily</p>
+                        <p class="event-description">Our flagship annual festival brings together the literary world's most celebrated voices for a week of inspiration, discussion, and celebration. This year's festival explores the theme "Reimagining Tomorrow" with a focus on speculative fiction, futurism, and visionary writing.</p>
+                        <div class="event-highlights">
+                            <h4>Event Highlights:</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> Over 50 author readings and book signings</li>
+                                <li><i class="fas fa-star"></i> Interactive workshops for aspiring writers</li>
+                                <li><i class="fas fa-star"></i> Children's literature corner with activities for young readers</li>
+                                <li><i class="fas fa-star"></i> Poetry slams and open mic sessions</li>
+                                <li><i class="fas fa-star"></i> Book marketplace featuring independent publishers</li>
+                            </ul>
+                        </div>
+                        <div class="event-schedule">
+                            <h4>Daily Themes:</h4>
+                            <ul>
+                                <li><strong>June 20:</strong> Science Fiction & Fantasy</li>
+                                <li><strong>June 21:</strong> Literary Fiction & Poetry</li>
+                                <li><strong>June 22:</strong> Mystery, Thriller & Crime</li>
+                                <li><strong>June 23:</strong> Historical Fiction & Non-Fiction</li>
+                                <li><strong>June 24:</strong> Young Adult & Children's Literature</li>
+                                <li><strong>June 25:</strong> Global Voices & Translated Works</li>
+                            </ul>
+                        </div>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=6" class="btn btn-primary"></a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="6"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Event 3 -->
+                <div class="featured-event">
+                    <div class="featured-event-image">
+                        <img src="https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Authors Summit 2025">
+                        <div class="event-badge">Featured</div>
+                    </div>
+                    <div class="featured-event-content">
+                        <div class="event-date">
+                            <span class="day">5-7</span>
+                            <span class="month">Aug</span>
+                        </div>
+                        <h3>International Authors Summit 2025</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> British Library, London</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 8:30 AM - 6:00 PM</p>
+                        <p class="event-description">A professional conference for authors, publishers, and literary agents focusing on the business and craft of writing in today's rapidly evolving publishing landscape. This year's summit addresses the impact of AI on writing and publishing.</p>
+                        <div class="event-highlights">
+                            <h4>Conference Tracks:</h4>
+                            <ul>
+                                <li><i class="fas fa-star"></i> The Business of Writing: Contracts, Rights & Royalties</li>
+                                <li><i class="fas fa-star"></i> Digital Publishing & Marketing Strategies</li>
+                                <li><i class="fas fa-star"></i> Craft Masterclasses with Award-Winning Authors</li>
+                                <li><i class="fas fa-star"></i> AI & Technology in Publishing</li>
+                                <li><i class="fas fa-star"></i> Global Markets & Translation Opportunities</li>
+                            </ul>
+                        </div>
+                        <div class="event-pricing">
+                            <h4>Registration Options:</h4>
+                            <ul>
+                                <li><strong>Full Conference Pass:</strong> $495 (Early Bird: $395)</li>
+                                <li><strong>One-Day Pass:</strong> $195</li>
+                                <li><strong>Virtual Attendance:</strong> $250</li>
+                                <li><strong>Student/Emerging Author:</strong> $195</li>
+                            </ul>
+                        </div>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=7" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="7"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Calendar -->
+    <section class="events-calendar">
+        <div class="container">
+            <h2 class="section-title">Events Calendar</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button id="prev-month" class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="current-month">June 2025</h3>
+                    <button id="next-month" class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="calendar-day-header">Sun</div>
+                    <div class="calendar-day-header">Mon</div>
+                    <div class="calendar-day-header">Tue</div>
+                    <div class="calendar-day-header">Wed</div>
+                    <div class="calendar-day-header">Thu</div>
+                    <div class="calendar-day-header">Fri</div>
+                    <div class="calendar-day-header">Sat</div>
+                    
+                    <!-- Calendar days will be generated by JavaScript -->
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day has-event">15
+                        <div class="event-indicator" data-event-id="1"></div>
+                    </div>
+                    <div class="calendar-day">16</div>
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day has-event">22
+                        <div class="event-indicator" data-event-id="2"></div>
+                    </div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day">25</div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day has-event">30
+                        <div class="event-indicator" data-event-id="3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="upcoming-events">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card" data-event-type="author-signing" data-event-location="new-york">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Author Signing</div>
+                        <h3>Author Meet & Greet: J.K. Rowling</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Central Library, New York</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 2:00 PM - 5:00 PM</p>
+                        <p class="event-description">Meet the bestselling author of the Harry Potter series and get your books signed. Limited tickets available.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=1" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="1"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card" data-event-type="book-launch" data-event-location="boston">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Book Launch</div>
+                        <h3>Book Launch: The Midnight Library</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Barnes & Noble, Boston</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 6:30 PM - 8:30 PM</p>
+                        <p class="event-description">Join Matt Haig for the launch of his new novel exploring the possibilities of life and regret. Reading and Q&A session included.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=2" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="2"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card" data-event-type="workshop" data-event-location="chicago">
+                    <div class="event-date">
+                        <span class="day">30</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Workshop</div>
+                        <h3>Literary Workshop: Creative Writing</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Writers Guild, Chicago</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 10:00 AM - 1:00 PM</p>
+                        <p class="event-description">A hands-on workshop for aspiring writers. Learn techniques for character development, plot structure, and dialogue from published authors.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=3" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="3"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card" data-event-type="reading" data-event-location="london">
+                    <div class="event-date">
+                        <span class="day">05</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Reading</div>
+                        <h3>Poetry Reading: Modern Voices</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> The Poetry Café, London</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 7:00 PM - 9:00 PM</p>
+                        <p class="event-description">An evening of contemporary poetry featuring readings from award-winning poets and open mic opportunities for attendees.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=4" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="4"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card" data-event-type="festival" data-event-location="frankfurt">
+                    <div class="event-date">
+                        <span class="day">10-15</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Festival</div>
+                        <h3>International Book Fair 2025</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Frankfurt Exhibition Center, Germany</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 9:00 AM - 6:00 PM</p>
+                        <p class="event-description">The world's largest trade fair for books featuring over 7,500 exhibitors from 100 countries, 300,000 visitors, and 4,000 events.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=5" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="5"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card" data-event-type="conference" data-event-location="online">
+                    <div class="event-date">
+                        <span class="day">18-20</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Conference</div>
+                        <h3>Digital Publishing Summit</h3>
+                        <p class="event-location"><i class="fas fa-laptop"></i> Online Event</p>
+                        <p class="event-time"><i class="far fa-clock"></i> Various Times (Check Schedule)</p>
+                        <p class="event-description">A virtual conference exploring the future of digital publishing, e-books, and online literature platforms. Industry experts and innovators share insights.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=7" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="7"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 7 -->
+                <div class="event-card" data-event-type="author-signing" data-event-location="paris">
+                    <div class="event-date">
+                        <span class="day">25</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Author Signing</div>
+                        <h3>Meet the Author: Elena Ferrante</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Shakespeare and Company, Paris</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 3:00 PM - 5:00 PM</p>
+                        <p class="event-description">A rare opportunity to meet the elusive author of the Neapolitan Novels. Discussion and book signing session included.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=8" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="8"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 8 -->
+                <div class="event-card" data-event-type="workshop" data-event-location="sydney">
+                    <div class="event-date">
+                        <span class="day">02</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Workshop</div>
+                        <h3>Manuscript to Publication: A Writer's Guide</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> State Library, Sydney</p>
+                        <p class="event-time"><i class="far fa-clock"></i> 11:00 AM - 4:00 PM</p>
+                        <p class="event-description">A comprehensive workshop covering the journey from manuscript completion to publication. Learn about literary agents, publishing options, and marketing strategies.</p>
+                        <div class="event-actions">
+                            <a href="event-details.html?id=9" class="btn btn-primary">View Details</a>
+                            <button class="btn btn-outline add-to-calendar" data-event-id="9"><i class="far fa-calendar-plus"></i> Add to Calendar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-btn">10</button>
+                <button class="pagination-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host an Event Section -->
+    <section class="host-event">
+        <div class="container">
+            <div class="host-event-content">
+                <div class="host-event-text">
+                    <h2>Host Your Literary Event with Us</h2>
+                    <p>Are you an author, publisher, or literary organization looking to host an event? Elite Readers provides a platform to promote your book launches, readings, workshops, and more to our community of book lovers.</p>
+                    <ul class="host-event-benefits">
+                        <li><i class="fas fa-check-circle"></i> Reach thousands of literature enthusiasts</li>
+                        <li><i class="fas fa-check-circle"></i> Professional event promotion and management</li>
+                        <li><i class="fas fa-check-circle"></i> Venue recommendations and partnerships</li>
+                        <li><i class="fas fa-check-circle"></i> Virtual event hosting options available</li>
+                    </ul>
+                    <a href="host-event.html" class="btn btn-primary">Submit Your Event</a>
+                </div>
+                <div class="host-event-image">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Host an Event">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on Literary Events</h2>
+                <p>Subscribe to our newsletter to receive weekly updates on upcoming events, author signings, book launches, and literary festivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-privacy">We respect your privacy and will never share your information. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3><i class="fas fa-book-open"></i> Elite Readers</h3>
+                    <p>Celebrating literature, authors, and the joy of reading through events, discussions, and community engagement.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="authors.html">Authors</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Literary City, LC 12345</p>
+                    <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@elitereaders.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elite Readers - Book Fair & Literature. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event Details Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="event-modal-content">
+                <!-- Event details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Add Event Modal -->
+    <div id="calendar-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="calendar-modal-content">
+                <h3>Add to Calendar</h3>
+                <div class="calendar-options">
+                    <a href="#" class="calendar-option" id="google-calendar">
+                        <i class="fab fa-google"></i> Google Calendar
+                    </a>
+                    <a href="#" class="calendar-option" id="apple-calendar">
+                        <i class="fab fa-apple"></i> Apple Calendar
+                    </a>
+                    <a href="#" class="calendar-option" id="outlook-calendar">
+                        <i class="fab fa-microsoft"></i> Outlook
+                    </a>
+                    <a href="#" class="calendar-option" id="yahoo-calendar">
+                        <i class="fab fa-yahoo"></i> Yahoo Calendar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/events.js"></script>
+    
+    <!-- Floating Social Media Bar -->
+    <div class="social-media-floating">
+        <a href="https://facebook.com/elitereaders" class="facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+        <a href="https://twitter.com/elitereaders" class="twitter" target="_blank">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+        </a>
+        <a href="https://instagram.com/elitereaders" class="instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+        <a href="https://linkedin.com/company/elitereaders" class="linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://youtube.com/elitereaders" class="youtube" target="_blank">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+        </a>
+    </div>
+</body>
+</html>
+
+
